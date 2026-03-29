@@ -31,7 +31,7 @@ export interface Contact {
 export interface Technology {
   name: string;
   href?: string;
-  type?: TechnologyEnum
+  type?: TechnologyEnum;
   icon: React.ComponentType;
 }
 
@@ -53,93 +53,98 @@ export interface Experience {
 }
 
 export interface Footer {
-  links: [
-    {
-      name: string;
-      href: string;
-    },
-  ];
-  contact: [
-    {
-      name?: string;
-      icon: React.ReactNode;
-      href: string;
-    },
-  ];
+  Navigate: {
+    name: string;
+    href: string;
+  }[];
+  contact: {
+    name?: string;
+    icon: React.ReactNode;
+    href: string;
+  }[];
 }
-
 
 export interface Gears {
-  name: string,
-  icon: React.ReactNode
+  name: string;
+  icon: React.ReactNode;
+  link?:string
 }
 
-export interface Skills {
-  name: string,
-  icon: React.ReactNode
-}
+// export interface Skills {
+//   name: string;
+//   icon: React.ReactNode;
+// }
+
 export interface SocialLinks {
-  name: string,
-  icon: React.ReactNode
-
+  name: string;
+  icon: React.ReactNode;
+  href: string;
 }
 
 export interface Meta {
-  title: string,
-  description: string,
-  keywords: string[],
+  title: string;
+  description: string;
+  keywords: string[];
   ogImage: string;
-  twitterCard?: "summary" | "summary_large_image"
+  twitterCard?: "summary" | "summary_large_image";
 }
 export interface BaseSiteConfig {
-  name: string,
-  title: string,
-  description: string,
-  url: string,
-  ogImage: string,
+  name: string;
+  title: string;
+  description: string;
+  url: string;
+  ogImage: string;
   author: {
-    name: string,
-    twitter: string,
-    github: string,
-    linkedin: string,
-    email: string
-  },
-  keyword: string[],
+    name: string;
+    twitter: string;
+    github: string;
+    linkedin: string;
+    email: string;
+  };
+  keyword: string[];
 }
 
 export interface Navbar {
-  logo: string,
-  navItems: [{
-    label: string,
-    href: string
-  }]
+  logo: string;
+  navItems: 
+    {
+      label: string;
+      href: string;
+    }[]
+  
 }
 
 export interface Project {
-  name: string,
-  image: string,
-  description: string[]
-  stack: Technology[]
-  isLive: boolean
-  github: string,
-  liveLink?: string,
-  duration?: string,
-  type: ProjectType[]
+  name: string;
+  image: string;
+  description: string[];
+  stack: Technology[];
+  isLive: boolean;
+  github: string;
+  liveLink?: string;
+  duration?: string;
+  type: ProjectType
 }
 
 export interface quote {
-  quote: string,
-  author: string
+  quote: string;
+  author: string;
 }
+// export interface MYContact{
+//   name:string,
+//   icon:React.ReactNode,
+//   href:string,
+// }
 
-enum ProjectType {
+export enum ProjectType {
   FULL_STACK,
+  AI,
   FRONTEND,
   BACKEND,
   MACHINE_LEARNING,
   CRYPTO,
   WEB3,
-  DEVOPS
+  DEVOPS,
 }
 
 export enum TechnologyEnum {
@@ -152,6 +157,7 @@ export enum TechnologyEnum {
 }
 
 export interface Resume {
-  url: string
+  name: string;
+  icon: React.ComponentType;
+  href: string;
 }
-
