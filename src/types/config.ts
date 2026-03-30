@@ -40,6 +40,7 @@ export interface Experience {
   company: string;
   position: string;
   location: string;
+  locationFlexibility:"Remote" |"On-Site"
   image: string;
   description: string[];
   startDate: string;

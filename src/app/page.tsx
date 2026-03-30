@@ -3,6 +3,8 @@ import Heading from "@/components/common/Heading";
 import SkillButton from "@/components/common/SkillButton";
 import SubHeading from "@/components/common/SubHeading";
 import { ThemeButton } from "@/components/common/ThemeButton";
+import ExperienceHero from "@/components/Experience/ExperienceHero";
+import ExperienceHeroCard from "@/components/Experience/ExperienceHeroCard";
 import MainHeading from "@/components/Hero/MainHeading";
 import SocialsLinks from "@/components/Hero/SocialsLinks";
 import { basicInformationService } from "@/config/BasicInformation.config";
@@ -16,6 +18,7 @@ export default function Home() {
         <MainHeading />
         <SubHeading className="text-sm py-4 " >{basicInformationService.info}</SubHeading>
         <SocialsLinks/>
+        <ExperienceHero  />
       </Container>
     </>
   );
