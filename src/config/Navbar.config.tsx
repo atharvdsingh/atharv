@@ -1,11 +1,10 @@
 import { Navbar } from "@/types/config";
 
-export const navbar: Navbar = {
-  logo: "/me.png",
+export const navbarConfig: Navbar = {
   navItems: [
     { label: "Home", href: "/" },
     { label: "Work", href: "/work" },
-    { label: "Project", href: "/Project" },
-    {label:"Resume",href:"/Resume"}
+    { label: "Project", href: "/project" },
+    {label:"Resume",href:"/resume"}
   ],
 };

@@ -4,6 +4,7 @@ export interface About {
   name: string;
   craft: string[];
   image?: string;
+  email:string
 }
 
 export interface Contact {
@@ -105,7 +106,6 @@ export interface BaseSiteConfig {
 }
 
 export interface Navbar {
-  logo: string;
   navItems: 
     {
       label: string;

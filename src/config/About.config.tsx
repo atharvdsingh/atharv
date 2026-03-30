@@ -3,6 +3,7 @@ import { About } from "@/types/config";
 export  const aboutConfig:About ={
     name:"Atharv Dev Singh",
     craft:["Engineer","Gamer"],
-    image:"./me.png" //ou image url
+    image:"/About/i.webp", //ou image url
+    email:"dsingh9450492600@gmail.com"
 
 }
