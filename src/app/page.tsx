@@ -11,6 +11,7 @@ import { basicInformationService } from "@/config/BasicInformation.config";
 import { technologyConfig } from "@/config/Technology.config";
 import Image from "next/image";
 import Project from "@/components/Hero/Project";
+import ProjectStackIcon from "@/components/Project/ProjectStackIcons";
 
 export default function Home() {
   return (
@@ -18,7 +19,11 @@ export default function Home() {
       <Container className="my-16 flex flex-col   ">
         <MainHeading />
         <SubHeading className="text-sm py-4 " >{basicInformationService.info}</SubHeading>
+        
         <SocialsLinks/>
+
+
+
         <ExperienceHero  />
         <Project/>
       </Container>

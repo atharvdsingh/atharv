@@ -4,7 +4,7 @@ export interface About {
   name: string;
   craft: string[];
   image?: string;
-  email:string
+  email: string
 }
 
 export interface Contact {
@@ -40,7 +40,7 @@ export interface Experience {
   company: string;
   position: string;
   location: string;
-  locationFlexibility:"Remote" |"On-Site"
+  locationFlexibility: "Remote" | "On-Site"
   image: string;
   description: string[];
   startDate: string;
@@ -69,7 +69,7 @@ export interface Footer {
 export interface Gears {
   name: string;
   icon: React.ReactNode;
-  link?:string
+  link?: string
 }
 
 // export interface Skills {
@@ -107,12 +107,12 @@ export interface BaseSiteConfig {
 }
 
 export interface Navbar {
-  navItems: 
-    {
-      label: string;
-      href: string;
-    }[]
-  
+  navItems:
+  {
+    label: string;
+    href: string;
+  }[]
+
 }
 
 export interface Project {
@@ -138,23 +138,23 @@ export interface quote {
 // }
 
 export enum ProjectType {
-  FULL_STACK,
-  AI,
-  FRONTEND,
-  BACKEND,
-  MACHINE_LEARNING,
-  CRYPTO,
-  WEB3,
-  DEVOPS,
+  FULL_STACK = "Full Stack",
+  AI = "AI",
+  FRONTEND = "Frontend",
+  BACKEND = "Backend",
+  MACHINE_LEARNING = "Machine Learning",
+  CRYPTO = "Crypto",
+  WEB3 = "Web3",
+  DEVOPS = "DevOps",
 }
 
 export enum TechnologyEnum {
-  LANGUAGE,
-  FRONTEND,
-  BACKEND,
-  DATABASE,
-  DEVOPS,
-  TESTING,
+  LANGUAGE = "Language",
+  FRONTEND = "Frontend",
+  BACKEND = "Backend",
+  DATABASE = "Database",
+  DEVOPS = "DevOps",
+  TESTING = "Testing",
 }
 
 export interface Resume {

@@ -4,7 +4,7 @@ import { technologyConfig } from "./Technology.config";
 const bookchetna: Project = {
   name: "BookChetna",
   image: "/project/bookchetna.png",
-  description: [" "],
+  description: ["hello world","hell"],
   stack:[
     ...technologyConfig
   ],
@@ -25,8 +25,8 @@ const workmind:Project={
     liveLink:"https://workmind.sanchetna.in",
     type: ProjectType.AI
 }
-export const projectsConfig:Project[] = [{
-    ...bookchetna,
-    ...workmind
-}
+export const projectsConfig:Project[] = [
+    {...bookchetna},
+    {...workmind}
+
 ]
