@@ -14,22 +14,26 @@ export default function ProjectHeroCard(project: Project) {
     <div className="flex flex-col max-w-3xl  items-center justify-center gap-2 ">
       <div className="flex justify-between w-full items-center ">
         <div className="flex flex-col  justify-center  ">
-          <div className="flex justify-center     items-center  gap-2">
+          <div className="flex      items-center  gap-2">
             <Heading> {project.name} </Heading>
-            <SubHeading className="hover:text-foreground">
+            <SubHeading className="hover:text-foreground transition-all duration-300 ease-in-out ">
               {" "}
-              <Globe size={20} />{" "}
+
+              <Link target="_blank" href={project.liveLink!} >
+                <Globe size={20} />
+              </Link>
             </SubHeading>
             <SubHeading className="hover:text-foreground">
-              {" "}
-              <Github />{" "}
+              <Link target="_blank" href={project.github} >
+                <Github className="size-5 fill-muted-foreground hover:fill-foreground transition-all duration-300 ease-in-out  " />
+              </Link>
             </SubHeading>
           </div>
           <SubHeading> {project.description[0]} </SubHeading>
         </div>
         <Button className="text-center" asChild variant={"link"}>
           <Link href={`.project/${project.name}`}>
-            Read More <MoveRight />{" "}
+            Read More <MoveRight />
           </Link>
         </Button>
       </div>

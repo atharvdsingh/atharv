@@ -4,7 +4,7 @@ import { technologyConfig } from "./Technology.config";
 const bookchetna: Project = {
   name: "BookChetna",
   image: "/project/bookchetna.png",
-  description: ["hello world","hell"],
+  description: ["Peer to Peer Book Exchange Platform",""],
   stack:[
     ...technologyConfig
   ],
@@ -16,7 +16,7 @@ const bookchetna: Project = {
 const workmind:Project={
     name:"Workmind",
     image:"/Project/workmind.png",
-    description:[""],
+    description:["AI Powered Productivity and Task Management Tool"],
     stack:[
         ...technologyConfig
     ],
