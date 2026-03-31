@@ -7,7 +7,7 @@ import Flask from "@/components/technologies/Flask";
 import { Experience, TechnologyEnum } from "@/types/config";
 
 const IITAllahabadConfig: Experience = {
-  company: "Indian Institute of Information Technology (IIIT) Allahabad",
+  company: "IIIT Allahabad",
   position: "Software Developer Intern",
   location: "Allahabad",
   image: "",
@@ -19,8 +19,8 @@ const IITAllahabadConfig: Experience = {
     "Containerized applications with Docker to ensure consistent environments and deployments.",
     "Utilized TypeScript and JavaScript to create scalable, type-safe web applications.",
   ],
-  startDate: "April 2025", // Please update with actual dates
-  endDate: "August 2025", // Please update with actual dates
+  startDate: "Apr 2025", // Please update with actual dates
+  endDate: "Aug 2025", // Please update with actual dates
   website: "https://www.iiita.ac.in/",
   x: "https://x.com/iiita_official?lang=en",
   isCurrent: false,

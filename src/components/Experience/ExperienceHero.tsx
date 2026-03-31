@@ -1,18 +1,16 @@
 import React from "react";
-import Heading from "../common/Heading";
+import Heading from "../common/headings/Heading";
 import { experienceConfig } from "@/config/Experience.config";
-import ExperienceHeroCard from "./ExperienceHeroCard";
+import ExperienceHeroCard from "../Hero/ExperienceHeroCard";
+import MajorHeading from "../common/headings/MajorHeading";
 
 export default function ExperienceHero() {
   return (
     <div className="flex my-10 gap-4 flex-col ">
-      <Heading>Experience</Heading>
-      {
-        experienceConfig.map((exp,index)=>(
-          <ExperienceHeroCard key={index} {...exp} />
-        ))
-      }
-      
+      <MajorHeading>Experience</MajorHeading>
+      {experienceConfig.map((exp, index) => (
+        <ExperienceHeroCard key={index} {...exp} />
+      ))}
     </div>
   );
 }

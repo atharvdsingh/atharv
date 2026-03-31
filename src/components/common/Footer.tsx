@@ -1,8 +1,8 @@
 import React from "react";
-import SubHeading from "./SubHeading";
+import SubHeading from "./headings/SubHeading";
 import { footerConfig } from "@/config/Footer.config";
 import { Link } from "next-view-transitions";
-import Heading from "./Heading";
+import Heading from "./headings/Heading";
 
 export default function Footer() {
   return (

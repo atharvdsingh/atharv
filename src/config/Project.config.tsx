@@ -11,7 +11,7 @@ const bookchetna: Project = {
   isLive:true,
   github:"https://github.com/atharvdsingh/bookchetna",
   liveLink:"https://book.sanchetna.in",
-  type: ProjectType.FULL_STACK
+  type: ProjectType["FULL_STACK"]
 };
 const workmind:Project={
     name:"Workmind",

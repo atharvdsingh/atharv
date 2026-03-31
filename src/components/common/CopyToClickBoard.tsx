@@ -3,7 +3,7 @@ import { CheckCheck, Copy } from "lucide-react";
 import React, { useCallback, useState } from "react";
 import { Button } from "../ui/button";
 import { Separator } from "../ui/separator";
-import SubHeading from "./SubHeading";
+import SubHeading from "./headings/SubHeading";
 
 export default function CopyToClickBoard({
   children,

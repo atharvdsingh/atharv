@@ -1,7 +1,7 @@
 "use client"
 import Container from '@/components/common/Container'
-import Heading from '@/components/common/Heading'
-import SubHeading from '@/components/common/SubHeading'
+import Heading from '@/components/common/headings/Heading'
+import SubHeading from '@/components/common/headings/SubHeading'
 import Resume from '@/components/Resume/Resume'
 import React from 'react'
 

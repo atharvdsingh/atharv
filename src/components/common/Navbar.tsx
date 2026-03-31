@@ -4,7 +4,7 @@ import { Button } from "../ui/button";
 import { Link } from "next-view-transitions";
 import { ThemeButton } from "./ThemeButton";
 import Container from "./Container";
-import SubHeading from "./SubHeading";
+import SubHeading from "./headings/SubHeading";
 
 export default function Navbar() {
   return (
