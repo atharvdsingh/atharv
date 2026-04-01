@@ -8,7 +8,7 @@ import WorkCard from './WorkCard'
 
 export default function WorkPage() {
   return (
-    <div>
+    <div className='mt-5  ' >
         <HeadingWithSubheading subHeading= {"These are  the places i work with "} heading={"Work"}  ></HeadingWithSubheading>
             <div className="flex  gap-4 flex-col ">
               {experienceConfig.map((exp, index) => (

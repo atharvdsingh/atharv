@@ -16,7 +16,7 @@ import ProjectStackIcon from "@/components/Project/ProjectStackIcons";
 export default function Home() {
   return (
     <>
-      <Container className="my-16 flex flex-col   ">
+      <Container className="flex flex-col   ">
         <MainHeading />
         <SubHeading className="text-sm py-4 " >{basicInformationService.info}</SubHeading>
         

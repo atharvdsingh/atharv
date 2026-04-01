@@ -9,11 +9,11 @@ import SubHeading from "./headings/SubHeading";
 export default function Navbar() {
   return (
     <Container>
-      <div className="flex  items-center justify-between">
+      <div className="flex inset-x-0 top-0 py-3 fixed max-w-3xl z-50  px-2 rounded-2xl backdrop-blur-sm mx-auto items-center justify-between">
         <div className="flex gap-8 items-center justify-evenly">
           {navbarConfig.navItems.map((navItem, index) => (
             <SubHeading
-              className=" hover:text-accent-foreground duration-200 cursor-pointer "
+              className="   hover:text-accent-foreground duration-200 cursor-pointer "
               key={index}
             >
               <Link href={navItem.href}>{navItem.label}</Link>
