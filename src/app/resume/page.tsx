@@ -7,7 +7,7 @@ import React from 'react'
 
 export default function page() {
   return (
-    <Container className=' py-16' >
+    <Container className='  py-16' >
         <Resume/>
         
     </Container>

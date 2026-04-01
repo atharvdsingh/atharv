@@ -9,10 +9,10 @@ export default function HeadingWithSubheading({
     subHeading,
 }: {
     heading: string;
-    subHeading: React.ReactNode;
+    subHeading: string;
 }) {
     return (
-        <div className="flex h-full flex-col gap-5" >
+        <div className="flex h-full flex-col gap-2" >
             <Heading>{heading}</Heading>
             < SubHeading>{subHeading}</SubHeading>
             <Separator className="my-5" />

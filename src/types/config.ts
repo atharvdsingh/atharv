@@ -162,3 +162,28 @@ export interface Resume {
   icon: React.ComponentType;
   href: string;
 }
+
+export interface Craft {
+
+  name: string,
+  description: string
+  href?: string
+}
+
+export interface Book {
+ 
+  type: BookTypeEnum,
+  book:{
+    name:string,
+    author:string,
+    link:string
+  }[]
+  
+}
+
+export enum BookTypeEnum {
+  TECH = "Tech",
+  NOVEL = "Novel",
+  SELF_HELP = "Self Help",
+  MEANING = "Meaning of Life"
+}
