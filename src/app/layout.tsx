@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Inter } from "next/font/google";
+import { Geist, Geist_Mono, Inter, Hanken_Grotesk } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/Providers/ThemeProviders";
@@ -9,6 +9,11 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import Footer from "@/components/common/Footer";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
+const hanken_Groktesk = Hanken_Grotesk({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-hanken",
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -37,13 +42,12 @@ export default function RootLayout({
       className={cn(
         "h-full",
         "antialiased",
-        geistSans.variable,
-        geistMono.variable,
-        "font-sans",
-        inter.variable,
+        hanken_Groktesk.variable,
+        
+        
       )}
     >
-      <body suppressHydrationWarning className="min-h-screen">
+      <body suppressHydrationWarning className={hanken_Groktesk.className}>
         <ViewTransitions>
           <ThemeProvider
             attribute="class"
