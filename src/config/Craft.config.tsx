@@ -8,7 +8,7 @@ import { Craft } from "@/types/config";
   },
   {
     name: "Books",
-    href: "/book",
+    href: "/books",
     description: "Book i love to read",
   },
 
