@@ -3,13 +3,13 @@ import Heading from "./headings/Heading";
 import SubHeading from "./headings/SubHeading";
 
 interface CardProps {
-  title: string;
   subtitle?: string;
+  children?: React.ReactNode;
 }
-export default function Card(cardProps: CardProps) {
+export default function BookCardSeperate(cardProps: CardProps) {
   return (
     <div className="flex flex-col gap-2 bg-card hover:bg-muted/60 px-3 border-[0.5]   ">
-      <Heading>{cardProps.title} </Heading>
+      <Heading>{cardProps.children} </Heading>
       <SubHeading> {cardProps.subtitle} </SubHeading>
     </div>
   );
