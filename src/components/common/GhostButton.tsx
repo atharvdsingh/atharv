@@ -21,9 +21,12 @@ export default function GhostButton({
 
           {children}
         </TooltipTrigger>
-        <TooltipContent>
-          <p>{name}</p>
-        </TooltipContent>
+        {
+          name && <TooltipContent>
+            <p>{name}</p>
+          </TooltipContent>
+        }
+
       </Tooltip>
     </div>
   );

@@ -9,7 +9,7 @@ import { Separator } from "../ui/separator";
 
 export default function MainHeading() {
   return (
-    <div className="flex mt-10 items-center justify-start ">
+    <div className="flex mt-10   items-center justify-start ">
       <Image
         src={aboutConfig.image || "/main.webp"}
         alt={aboutConfig.name}

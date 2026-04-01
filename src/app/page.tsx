@@ -12,20 +12,24 @@ import { technologyConfig } from "@/config/Technology.config";
 import Image from "next/image";
 import Project from "@/components/Hero/Project";
 import ProjectStackIcon from "@/components/Project/ProjectStackIcons";
+import Craft from "@/components/Hero/Craft";
 
 export default function Home() {
   return (
     <>
-      <Container className="flex flex-col   ">
-        <MainHeading />
-        <SubHeading className="text-sm py-4 " >{basicInformationService.info}</SubHeading>
-        
-        <SocialsLinks/>
+      <Container className="flex   flex-col   ">
+        <div className=" flex flex-col min-h-screen ">
+          <MainHeading />
+          <SubHeading className="text-sm py-4 ">
+            {basicInformationService.info}
+          </SubHeading>
 
+          <SocialsLinks />
 
-
-        <ExperienceHero  />
-        <Project/>
+          <ExperienceHero />
+          <Project />
+          <Craft/>
+        </div>
       </Container>
     </>
   );
