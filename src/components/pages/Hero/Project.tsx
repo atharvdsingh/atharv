@@ -18,7 +18,7 @@ export default function Project() {
       <div className="flex justify-center items-center " >
 
   <Button className="cursor-pointer w-fit p-2 " variant={"outline"} >
-    <Link  href={"/projects"} > Show all Project </Link>
+    <Link  href={"/projects"} > Show all Projects </Link>
   </Button>
       </div>
     </div>
