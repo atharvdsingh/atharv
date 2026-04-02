@@ -31,11 +31,16 @@ export default function ProjectHeroCard(project: Project) {
           </div>
           <SubHeading> {project.description[0]} </SubHeading>
         </div>
-        <Button className="text-center" asChild variant={"link"}>
-          <Link href={`.project/${project.name}`}>
-            Read More <MoveRight />
+          { project.isLive &&(
+
+            <Button className="text-center" asChild variant={"link"}>
+
+          <Link target="_blank" href={project.liveLink! || "/"}>
+            Live Link <MoveRight />
           </Link>
         </Button>
+        )
+          }
       </div>
     </div>
   );

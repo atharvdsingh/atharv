@@ -35,4 +35,4 @@ const IITAllahabadConfig: Experience = {
   ],
 };
 
-export const experienceConfig: Experience[] = [IITAllahabadConfig];
+export const experienceConfig: Experience[] = [IITAllahabadConfig , IITAllahabadConfig];
