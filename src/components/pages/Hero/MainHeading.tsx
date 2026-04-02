@@ -1,11 +1,11 @@
 import { aboutConfig } from "@/config/About.config";
 import Image from "next/image";
 import React from "react";
-import Heading from "../common/headings/Heading";
-import SubHeading from "../common/headings/SubHeading";
-import CopyToClickBoard from "../common/CopyToClickBoard";
+import Heading from "../../common/headings/Heading";
+import SubHeading from "../../common/headings/SubHeading";
+import CopyToClickBoard from "../../common/CopyToClickBoard";
 import { socialLinks } from "@/config/SocialLinks.config";
-import { Separator } from "../ui/separator";
+import { Separator } from "../../ui/separator";
 
 export default function MainHeading() {
   return (

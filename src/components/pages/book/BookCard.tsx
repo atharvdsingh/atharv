@@ -1,12 +1,12 @@
 import React from "react";
-import MajorHeading from "../common/headings/MajorHeading";
+import MajorHeading from "../../common/headings/MajorHeading";
 import { Book } from "@/types/config";
-import SkillButton from "../common/SkillButton";
+import SkillButton from "../../common/SkillButton";
 import { BookA } from "lucide-react";
 import Card from "./BookCardSeperate";
 import { Link } from "next-view-transitions";
-import { Button } from "../ui/button";
-import SubHeading from "../common/headings/SubHeading";
+import { Button } from "../../ui/button";
+import SubHeading from "../../common/headings/SubHeading";
 import BookCardSeperate from "./BookCardSeperate";
 
 export default function BookCard(book: Book) {

@@ -1,8 +1,8 @@
 import React from "react";
-import Container from "../common/Container";
-import Heading from "../common/headings/Heading";
-import SubHeading from "../common/headings/SubHeading";
-import HeadingWithSubheading from "../common/headings/HeadingWithSubheading";
+import Container from "../../common/Container";
+import Heading from "../../common/headings/Heading";
+import SubHeading from "../../common/headings/SubHeading";
+import HeadingWithSubheading from "../../common/headings/HeadingWithSubheading";
 import { book } from "@/config/Book.config";
 import BookCard from "./BookCard";
 

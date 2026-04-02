@@ -1,4 +1,4 @@
-import Book from '@/components/book/Book'
+import Book from '@/components/pages/book/Book'
 import Container from '@/components/common/Container'
 import React from 'react'
 

@@ -1,9 +1,9 @@
 import React, { Suspense } from "react";
-import Heading from "../common/headings/Heading";
-import SubHeading from "../common/headings/SubHeading";
-import { Separator } from "../ui/separator";
+import Heading from "../../common/headings/Heading";
+import SubHeading from "../../common/headings/SubHeading";
+import { Separator } from "../../ui/separator";
 import ResumeFrame from "./ResumeFrame";
-import CopyToClickBoard from "../common/CopyToClickBoard";
+import CopyToClickBoard from "../../common/CopyToClickBoard";
 import { ResumeConfig } from "@/config/Resume.config";
 
 export default function Resume() {

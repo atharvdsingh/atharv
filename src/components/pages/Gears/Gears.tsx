@@ -1,6 +1,6 @@
 import React from 'react'
-import HeadingWithSubheading from '../common/headings/HeadingWithSubheading'
-import { Separator } from '../ui/separator'
+import HeadingWithSubheading from '../../common/headings/HeadingWithSubheading'
+import { Separator } from '../../ui/separator'
 
 import GearsCard from './GearsCard'
 import { gears } from '@/config/Gear.config'

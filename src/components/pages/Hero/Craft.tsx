@@ -1,7 +1,7 @@
 import React from 'react'
-import MajorHeading from '../common/headings/MajorHeading'
+import MajorHeading from '../../common/headings/MajorHeading'
 import { craftConfig } from '@/config/Craft.config'
-import ActionCard from '../card/ActionCard'
+import ActionCard from '../../card/ActionCard'
 
 export default function Craft() {
   return (

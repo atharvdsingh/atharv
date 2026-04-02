@@ -1,6 +1,6 @@
 import React from "react";
-import Heading from "../common/headings/Heading";
-import SubHeading from "../common/headings/SubHeading";
+import Heading from "../../common/headings/Heading";
+import SubHeading from "../../common/headings/SubHeading";
 import { Link } from "next-view-transitions";
 
 interface CardProps {

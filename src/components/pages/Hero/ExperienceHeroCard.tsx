@@ -1,7 +1,7 @@
 import { Experience } from "@/types/config";
 import React from "react";
-import SubHeading from "../common/headings/SubHeading";
-import Heading from "../common/headings/Heading";
+import SubHeading from "../../common/headings/SubHeading";
+import Heading from "../../common/headings/Heading";
 
 export default function ExperienceHeroCard(experience: Experience) {
   return (
