@@ -8,7 +8,7 @@ import BookCard from "./BookCard";
 
 export default function Book() {
   return (
-    <div className="mt-5  min-h-screen ">
+    <div className="mt-10  min-h-screen ">
       <HeadingWithSubheading
         heading="Books"
         subHeading="Book that shape thinking"

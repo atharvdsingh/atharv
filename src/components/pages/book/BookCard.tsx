@@ -1,31 +1,26 @@
-import React from "react";
 import MajorHeading from "../../common/headings/MajorHeading";
 import { Book } from "@/types/config";
-import SkillButton from "../../common/SkillButton";
-import { BookA } from "lucide-react";
-import Card from "./BookCardSeperate";
-import { Link } from "next-view-transitions";
-import { Button } from "../../ui/button";
-import SubHeading from "../../common/headings/SubHeading";
-import BookCardSeperate from "./BookCardSeperate";
+
+import { BookOpen } from "lucide-react";
+
+import GhostCard from "@/components/card/GhostCard";
 
 export default function BookCard(book: Book) {
   return (
     <div>
-      <div className="flex flex-col gap-2 ">
-        <div className="flex gap-2 ">
-          <SkillButton>
-            <BookA />
-          </SkillButton>
+      <div className="flex flex-col space-y-4 ">
+        <div className="flex justify-start items-center gap-2 ">
+         
+            <BookOpen size={20} />
           <MajorHeading>{book.type}</MajorHeading>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 " >
+        <div className="grid space- grid-cols-1 md:grid-cols-2 gap-5 " >
 
           {book.book.map((b, index) => (
-            <BookCardSeperate subtitle={b.author} key={index}>
+            <GhostCard subtitle={b.author} key={index}>
               {b.name}
-            </BookCardSeperate>
+            </GhostCard>
           ))}
         </div>
       </div>
