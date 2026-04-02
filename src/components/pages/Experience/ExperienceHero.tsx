@@ -1,8 +1,8 @@
 import React from "react";
-import Heading from "../common/headings/Heading";
+import Heading from "../../common/headings/Heading";
 import { experienceConfig } from "@/config/Experience.config";
 import ExperienceHeroCard from "../Hero/ExperienceHeroCard";
-import MajorHeading from "../common/headings/MajorHeading";
+import MajorHeading from "../../common/headings/MajorHeading";
 
 export default function ExperienceHero() {
   return (

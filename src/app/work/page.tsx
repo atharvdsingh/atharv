@@ -1,5 +1,5 @@
 import Container from "@/components/common/Container";
-import WorkPage from "@/components/work/WorkPage";
+import WorkPage from "@/components/pages/work/WorkPage";
 import React from "react";
 
 export default function page() {

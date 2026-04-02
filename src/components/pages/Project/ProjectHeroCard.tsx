@@ -1,13 +1,13 @@
 import { Project } from "@/types/config";
 import React from "react";
-import SubHeading from "../common/headings/SubHeading";
+import SubHeading from "../../common/headings/SubHeading";
 import { Link } from "next-view-transitions";
-import { Button } from "../ui/button";
+import { Button } from "../../ui/button";
 import { Globe, MoveRight, WholeWord } from "lucide-react";
-import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
+import { Tooltip, TooltipContent, TooltipTrigger } from "../../ui/tooltip";
 import ProjectStackIcon from "./ProjectStackIcons";
-import Heading from "../common/headings/Heading";
-import Github from "../technologies/Github";
+import Heading from "../../common/headings/Heading";
+import Github from "../../technologies/Github";
 
 export default function ProjectHeroCard(project: Project) {
   return (

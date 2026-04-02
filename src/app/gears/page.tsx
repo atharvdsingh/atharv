@@ -1,5 +1,5 @@
 import Container from '@/components/common/Container'
-import Gears from '@/components/Gears/Gears'
+import Gears from '@/components/pages/Gears/Gears'
 import React from 'react'
 
 export default function page() {

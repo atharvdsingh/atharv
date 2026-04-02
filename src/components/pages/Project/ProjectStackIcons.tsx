@@ -1,7 +1,7 @@
 import React from "react";
-import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
+import { Tooltip, TooltipContent, TooltipTrigger } from "../../ui/tooltip";
 import { Project, Technology } from "@/types/config";
-import SubHeading from "../common/headings/SubHeading";
+import SubHeading from "../../common/headings/SubHeading";
 
 export default function ProjectStackIcon(stack: Technology) {
   return (

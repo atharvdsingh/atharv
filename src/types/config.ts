@@ -187,3 +187,9 @@ export enum BookTypeEnum {
   SELF_HELP = "Self Help",
   MEANING = "Meaning of Life"
 }
+
+export interface Movies {
+  name:string,
+  imdbHref:string,
+  releaseDate?:string,
+}

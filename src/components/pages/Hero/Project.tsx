@@ -1,5 +1,5 @@
 import React from "react";
-import MajorHeading from "../common/headings/MajorHeading";
+import MajorHeading from "../../common/headings/MajorHeading";
 import { projectsConfig } from "@/config/Project.config";
 import ProjectHeroCard from "../Project/ProjectHeroCard";
 
