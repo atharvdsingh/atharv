@@ -4,6 +4,7 @@ import { projectsConfig } from "@/config/Project.config";
 import ProjectHeroCard from "../Project/ProjectHeroCard";
 import { Button } from "@/components/ui/button";
 import { Link } from "next-view-transitions";
+import ShowAllProject from "./ShowAllProject";
 
 export default function Project() {
   return (
@@ -16,6 +17,7 @@ export default function Project() {
         </div>
       ))}
       <div className="flex justify-center items-center " >
+        <ShowAllProject/>
 
 
       </div>
