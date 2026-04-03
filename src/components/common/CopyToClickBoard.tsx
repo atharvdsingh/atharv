@@ -4,6 +4,7 @@ import React, { useCallback, useState } from "react";
 import { Button } from "../ui/button";
 import { Separator } from "../ui/separator";
 import SubHeading from "./headings/SubHeading";
+import HapticFeedback from "./HapticFeedback";
 
 export default function CopyToClickBoard({
   children,
@@ -30,7 +31,10 @@ export default function CopyToClickBoard({
       variant={"link"}
       className=" text-sm cursor-copy px-0 text-muted-foreground hover:text-foreground ring-0 transition-all   "
     >
+      <HapticFeedback feedback="selection" >
+
       {children}
+      </HapticFeedback>
 
       <span className=" ">{loading ? <CheckCheck /> : <Copy />}</span>
     </Button>

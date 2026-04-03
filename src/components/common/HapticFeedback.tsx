@@ -21,8 +21,8 @@ export default function HapticFeedback({
     }
   };
   return (
-    <button {...props} onClick={handleFeedback} className={cn(className!)}>
+    <div {...props} onClick={handleFeedback} className={cn(className!)}>
       {children}
-    </button>
+    </div>
   );
 }

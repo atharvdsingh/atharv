@@ -6,6 +6,7 @@ import MajorHeading from "../../common/headings/MajorHeading";
 import ActionCard from "@/components/card/ActionCard";
 import { Button } from "@/components/ui/button";
 import { Link } from "next-view-transitions";
+import HapticFeedback from "@/components/common/HapticFeedback";
 
 export default function ExperienceHero() {
   return (
@@ -17,7 +18,10 @@ export default function ExperienceHero() {
       <div className="flex justify-center items-center " >
 
   <Button className="cursor-pointer w-fit p-2 " variant={"outline"} >
+    <HapticFeedback feedback="light" >
+
     <Link  href={"/work"} > Show all work experience </Link>
+    </HapticFeedback>
   </Button>
       </div>
     </div>

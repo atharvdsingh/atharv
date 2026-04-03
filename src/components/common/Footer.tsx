@@ -3,6 +3,7 @@ import SubHeading from "./headings/SubHeading";
 import { footerConfig } from "@/config/Footer.config";
 import { Link } from "next-view-transitions";
 import Heading from "./headings/Heading";
+import HapticFeedback from "./HapticFeedback";
 
 export default function Footer() {
   return (
@@ -16,8 +17,11 @@ export default function Footer() {
                 key={index}
                 className="hover:text-foreground flex justify-center items-center "
               >
-                <Link className="text-sm  " href={item.href}>
+
+                <Link className="text-sm " href={item.href}>
+                <HapticFeedback feedback="selection" >
                   {item.name}{" "}
+                </HapticFeedback>
                 </Link>
               </SubHeading>
             ))}
