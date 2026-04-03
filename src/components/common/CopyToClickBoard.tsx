@@ -26,17 +26,17 @@ export default function CopyToClickBoard({
     }, 1500);
   };
   return (
+    <HapticFeedback feedback="impact" >
     <Button
       onClick={onclick}
       variant={"link"}
       className=" text-sm cursor-copy px-0 text-muted-foreground hover:text-foreground ring-0 transition-all   "
     >
-      <HapticFeedback feedback="impact" >
 
       {children}
 
       <span className=" ">{loading ? <CheckCheck /> : <Copy />}</span>
-      </HapticFeedback>
     </Button>
+      </HapticFeedback>
   );
 }
