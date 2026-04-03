@@ -7,6 +7,7 @@ import Navbar from "@/components/common/Navbar";
 import { ViewTransitions } from "next-view-transitions";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Footer from "@/components/common/Footer";
+import { Analytics } from '@vercel/analytics/next';
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 const hanken_Groktesk = Hanken_Grotesk({
@@ -59,6 +60,7 @@ export default function RootLayout({
               <Navbar />
 
               {children}
+              <Analytics/>
               <Footer />
             </TooltipProvider>
           </ThemeProvider>

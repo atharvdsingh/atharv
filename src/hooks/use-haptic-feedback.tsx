@@ -10,25 +10,24 @@ export const useHapticFeedback = () => {
     if (typeof window === 'undefined') return;
 
     try {
-      // Check for Haptic Feedback API (modern browsers)
       if ('vibrate' in navigator) {
-        let pattern: number | number[] = 10; // default light vibration
+        let pattern: number | number[] = 10; 
 
         switch (type) {
           case 'light':
             pattern = 10;
             break;
           case 'medium':
-            pattern = 20;
+            pattern = 40;
             break;
           case 'heavy':
-            pattern = 40;
+            pattern = 80;
             break;
           case 'selection':
             pattern = [10];
             break;
           case 'impact':
-            pattern = [15, 10, 15];
+            pattern = [15, 10, 15,40,40,40];
             break;
         }
 
