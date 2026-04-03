@@ -31,7 +31,7 @@ export default function CopyToClickBoard({
       variant={"link"}
       className=" text-sm cursor-copy px-0 text-muted-foreground hover:text-foreground ring-0 transition-all   "
     >
-      <HapticFeedback feedback="selection" >
+      <HapticFeedback feedback="impact" >
 
       {children}
       </HapticFeedback>
