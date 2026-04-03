@@ -140,6 +140,10 @@ export const generateMetadata = (pathname: string) => {
     keywords: pageMeta.keywords,
     authors: [{ name: siteConfig.author.name }],
     creator: siteConfig.author.name,
+    icons: {
+      icon: aboutConfig.image,
+      apple: aboutConfig.image,
+    },
     openGraph: {
       type: "website",
       url: `${siteConfig.url}${pathname}`,
