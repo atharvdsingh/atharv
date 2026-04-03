@@ -2,7 +2,7 @@
 
 import { useCallback } from 'react';
 
-type HapticFeedbackType = 'light' | 'medium' | 'heavy' | 'selection' | 'impact';
+export type HapticFeedbackType = 'light' | 'medium' | 'heavy' | 'selection' | 'impact';
 
 export const useHapticFeedback = () => {
   const triggerHaptic = useCallback((type: HapticFeedbackType = 'light') => {

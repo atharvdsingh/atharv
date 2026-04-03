@@ -5,6 +5,7 @@ import { Link } from "next-view-transitions";
 import { ThemeButton } from "./ThemeButton";
 import Container from "./Container";
 import SubHeading from "./headings/SubHeading";
+import HapticFeedback from "./HapticFeedback";
 
 export default function Navbar() {
   return (
@@ -16,7 +17,10 @@ export default function Navbar() {
               className="   hover:text-accent-foreground duration-200 cursor-pointer "
               key={index}
             >
+              <HapticFeedback feedback="light" >
+
               <Link href={navItem.href}>{navItem.label}</Link>
+              </HapticFeedback>
             </SubHeading>
           ))}
         </div>
