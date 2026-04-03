@@ -8,6 +8,7 @@ import { ViewTransitions } from "next-view-transitions";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Footer from "@/components/common/Footer";
 import { Analytics } from '@vercel/analytics/next';
+import GoToTop from "@/components/common/GoToTop";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 const hanken_Groktesk = Hanken_Grotesk({
@@ -61,10 +62,12 @@ export default function RootLayout({
 
               {children}
               <Analytics/>
+              <GoToTop/>
               <Footer />
             </TooltipProvider>
           </ThemeProvider>
         </ViewTransitions>
+
       </body>
     </html>
   );
