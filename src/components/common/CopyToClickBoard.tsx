@@ -34,9 +34,9 @@ export default function CopyToClickBoard({
       <HapticFeedback feedback="impact" >
 
       {children}
-      </HapticFeedback>
 
       <span className=" ">{loading ? <CheckCheck /> : <Copy />}</span>
+      </HapticFeedback>
     </Button>
   );
 }

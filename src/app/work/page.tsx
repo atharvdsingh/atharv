@@ -5,7 +5,7 @@ import { generateMetadata as getMetadata } from "@/config/Meta.config";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  ...getMetadata('/contact'),
+  ...getMetadata('/work-experience'),
   robots: {
     index: true,
     follow: true,
