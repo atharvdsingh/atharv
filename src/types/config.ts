@@ -3,7 +3,7 @@ import React from "react";
 export interface About {
   name: string;
   craft: string[];
-  image?: string;
+  image: string;
   email: string
 }
 

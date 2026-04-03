@@ -21,5 +21,5 @@ export const socialLinks: SocialLinks[] = [
     icon: <Instagram />,
     href: "https://www.instagram.com/ig_atharvdev/",
   },
-  { name: "Mail", icon: <Mail />, href: "mailto:dsingh9450492600@gmail.com" },
+  { name: "email", icon: <Mail />, href: "mailto:dsingh9450492600@gmail.com" },
 ];
