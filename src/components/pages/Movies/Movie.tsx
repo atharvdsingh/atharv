@@ -1,7 +1,6 @@
 import GhostCard from "@/components/card/GhostCard";
 import HeadingWithSubheading from "@/components/common/headings/HeadingWithSubheading";
 import { MovieConfig } from "@/config/Movies.config";
-import React from "react";
 
 export default function Movie() {
   return <div className="mt-10 min-h-screen ">

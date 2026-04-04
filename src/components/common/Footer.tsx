@@ -1,8 +1,6 @@
-import React from "react";
 import SubHeading from "./headings/SubHeading";
 import { footerConfig } from "@/config/Footer.config";
 import { Link } from "next-view-transitions";
-import Heading from "./headings/Heading";
 import HapticFeedback from "./HapticFeedback";
 
 export default function Footer() {

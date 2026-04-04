@@ -1,9 +1,7 @@
 "use client";
 import { CheckCheck, Copy } from "lucide-react";
-import React, { useCallback, useState } from "react";
+import React, { useState } from "react";
 import { Button } from "../ui/button";
-import { Separator } from "../ui/separator";
-import SubHeading from "./headings/SubHeading";
 import HapticFeedback from "./HapticFeedback";
 
 export default function CopyToClickBoard({

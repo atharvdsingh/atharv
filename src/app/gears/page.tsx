@@ -1,8 +1,7 @@
 import { generateMetadata } from "@/config/Meta.config";
 
-import Container from '@/components/common/Container'
-import Gears from '@/components/pages/Gears/Gears'
-import React from 'react'
+import Container from '@/components/common/Container';
+import Gears from '@/components/pages/Gears/Gears';
 
 
 export const metadata = generateMetadata("/gears");

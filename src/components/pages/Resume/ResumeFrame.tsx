@@ -1,5 +1,3 @@
-import { ResumeConfig } from "@/config/Resume.config";
-import React from "react";
 
 export default function ResumeFrame() {
   return (

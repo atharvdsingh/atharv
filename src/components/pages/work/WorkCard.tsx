@@ -1,9 +1,7 @@
 import { Experience } from "@/types/config";
-import React from "react";
 import SubHeading from "../../common/headings/SubHeading";
 import Heading from "../../common/headings/Heading";
 import GhostButton from "../../common/GhostButton";
-import { Separator } from "../../ui/separator";
 
 export default function WorkCard(experience: Experience) {
   return (

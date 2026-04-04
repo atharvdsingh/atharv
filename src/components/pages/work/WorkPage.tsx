@@ -1,9 +1,5 @@
-import React from 'react'
 import HeadingWithSubheading from '../../common/headings/HeadingWithSubheading'
-import ExperienceHeroCard from '../Hero/ExperienceHeroCard'
-import MajorHeading from '../../common/headings/MajorHeading'
 import { experienceConfig } from '@/config/Experience.config'
-import SubHeading from '../../common/headings/SubHeading'
 import WorkCard from './WorkCard'
 
 export default function WorkPage() {

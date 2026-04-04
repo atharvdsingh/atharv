@@ -1,7 +1,5 @@
 import { socialLinks } from "@/config/SocialLinks.config";
-import React from "react";
 import { Tooltip, TooltipContent, TooltipTrigger } from "../../ui/tooltip";
-// import { Link } from "next-view-transitions";
 import Link from "next/link";
 
 export default function SocialsLinks() {

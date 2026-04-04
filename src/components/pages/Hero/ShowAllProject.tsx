@@ -2,7 +2,6 @@
 import { Button } from "@/components/ui/button";
 import { useHapticFeedback } from "@/hooks/use-haptic-feedback";
 import { Link } from "next-view-transitions";
-import React from "react";
 
 export default function ShowAllProject() {
     const {triggerHaptic,isMobile} = useHapticFeedback()
