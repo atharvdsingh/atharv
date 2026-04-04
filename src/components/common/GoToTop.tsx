@@ -3,7 +3,7 @@
 import { ArrowUp } from "lucide-react";
 import HapticFeedback from "./HapticFeedback";
 import { useEffect, useState } from "react";
-
+import {motion} from "motion/react"
 export default function GoToTop() {
   const [visible, setVisible] = useState<boolean>(false);
   useEffect(() => {
@@ -25,15 +25,28 @@ export default function GoToTop() {
   };
   if(!visible) return null
   return (
-    <div
+    <motion.div
+    initial={{
+      y:90
+    }}
+    animate={{
+      y:-10
+    }}
+    exit={{
+      y:100
+    }}
+    transition={{
+      duration:0.3,
+      ease:"easeOut"
+    }}
       onClick={handleOnclick}
-      className=" fixed bottom-2 right-10   transition-all hover:bg-primary/90 bg-primary text-background  cursor-pointer  border border-foreground/40 flex items-center justify-center p-2 rounded-full "
+      className=" fixed bottom-10 right-10   transition-all hover:bg-primary/90 bg-primary text-background  cursor-pointer  border border-foreground/40 flex items-center justify-center p-2 rounded-full "
     >
       {visible && (
         <HapticFeedback feedback="heavy">
           <ArrowUp />
         </HapticFeedback>
       )}
-    </div>
+    </motion.div>
   );
 }

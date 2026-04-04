@@ -7,9 +7,7 @@ import GhostButton from "../../common/GhostButton";
 export default function GearsCard(gear: Gears) {
   return (
     <div className="flex gap-2 text-muted-foreground truncate hover:text-foreground items-center ">
-      <GhostButton>
         <div className="[&>svg]:size-6"> {gear.icon} </div>
-      </GhostButton>
       <Button
         className="text-muted-foreground hover:text-foreground   "
         variant={"link"}

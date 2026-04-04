@@ -1,3 +1,4 @@
+import StaggerComponentForList from "@/components/animations/StaggerComponentForList";
 import GhostCard from "@/components/card/GhostCard";
 import HeadingWithSubheading from "@/components/common/headings/HeadingWithSubheading";
 import { MovieConfig } from "@/config/Movies.config";
@@ -9,7 +10,10 @@ export default function Movie() {
 
     {
         MovieConfig.map((movie,index)=>(
+          <StaggerComponentForList key={index} idx={index}  >
+
             <GhostCard key={index}  className="text-2xl"  subtitle={movie.releaseDate} > {movie.name} </GhostCard>
+          </StaggerComponentForList>
         ))
     }
   </div>

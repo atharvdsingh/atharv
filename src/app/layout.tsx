@@ -10,6 +10,7 @@ import Footer from "@/components/common/Footer";
 import { Analytics } from '@vercel/analytics/next';
 import GoToTop from "@/components/common/GoToTop";
 import { generateMetadata as getMetadata } from "@/config/Meta.config";
+import Blur from "@/components/common/Blur";
 
 const hanken_Groktesk = Hanken_Grotesk({
   subsets: ["latin"],
@@ -51,6 +52,7 @@ export default function RootLayout({
               <Analytics />
               <GoToTop />
               <Footer />
+              <Blur/>
             </TooltipProvider>
           </ThemeProvider>
         </ViewTransitions>

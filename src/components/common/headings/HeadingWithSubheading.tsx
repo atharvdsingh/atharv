@@ -13,7 +13,7 @@ export default function HeadingWithSubheading({
 }) {
     return (
         <div className="flex h-full flex-col gap-2" >
-            <Heading>{heading}</Heading>
+            <Heading className="text-xl" >{heading}</Heading>
             < SubHeading>{subHeading}</SubHeading>
             <Separator className="my-5" />
 

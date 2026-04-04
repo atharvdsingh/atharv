@@ -1,3 +1,4 @@
+import StaggerComponentForList from "@/components/animations/StaggerComponentForList";
 import Container from "@/components/common/Container";
 import WorkPage from "@/components/pages/work/WorkPage";
 import { generateMetadata as getMetadata } from "@/config/Meta.config";
@@ -22,7 +23,10 @@ export const metadata: Metadata = {
 export default function page() {
   return (
     <Container   >
+      <StaggerComponentForList>
+
       <WorkPage />
+      </StaggerComponentForList>
     </Container>
   );
 }
