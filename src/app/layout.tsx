@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Inter, Hanken_Grotesk } from "next/font/google";
+import { Hanken_Grotesk } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/Providers/ThemeProviders";
@@ -11,21 +11,10 @@ import { Analytics } from '@vercel/analytics/next';
 import GoToTop from "@/components/common/GoToTop";
 import { generateMetadata as getMetadata } from "@/config/Meta.config";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 const hanken_Groktesk = Hanken_Grotesk({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-hanken",
-});
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
 });
 
 export const metadata = getMetadata('/');
@@ -43,8 +32,8 @@ export default function RootLayout({
         "h-full",
         "antialiased",
         hanken_Groktesk.variable,
-        
-        
+
+
       )}
     >
       <body suppressHydrationWarning className={hanken_Groktesk.className}>
@@ -59,8 +48,8 @@ export default function RootLayout({
               <Navbar />
 
               {children}
-              <Analytics/>
-              <GoToTop/>
+              <Analytics />
+              <GoToTop />
               <Footer />
             </TooltipProvider>
           </ThemeProvider>

@@ -1,9 +1,7 @@
 import Container from "@/components/common/Container";
-import GhostButton from "@/components/common/GhostButton";
 import Heading from "@/components/common/headings/Heading";
 import SubHeading from "@/components/common/headings/SubHeading";
 import SkillButton from "@/components/common/SkillButton";
-import { Button } from "@/components/ui/button";
 import { Link } from "next-view-transitions";
 
 export default function NotFound() {
@@ -11,18 +9,18 @@ export default function NotFound() {
     <Container className="flex items-center min-h-screen justify-center">
       <div className="min-h-screen" >
 
-      <div className="min-h-[60vh] flex items-center justify-center ">
-        <div className=" flex  flex-col justify-center items-center space-y-3">
-          <p className="text-5xl tracking-widest font-extrabold opacity-95 "> 404 </p>
-          <Heading> Page Not Found</Heading>
-          <SubHeading>Could not find requested resource</SubHeading>
+        <div className="min-h-[60vh] flex items-center justify-center ">
+          <div className=" flex  flex-col justify-center items-center space-y-3">
+            <p className="text-5xl tracking-widest font-extrabold opacity-95 "> 404 </p>
+            <Heading> Page Not Found</Heading>
+            <SubHeading>Could not find requested resource</SubHeading>
             <SkillButton className="px-3  " >
 
 
-          <Link href={"/"} className="" >Home</Link>
+              <Link href={"/"} className="" >Home</Link>
             </SkillButton>
+          </div>
         </div>
-      </div>
       </div>
     </Container>
   );

@@ -2,10 +2,7 @@ import { generateMetadata } from "@/config/Meta.config";
 export const metadata = generateMetadata("/resume");
 
 import Container from '@/components/common/Container'
-import Heading from '@/components/common/headings/Heading'
-import SubHeading from '@/components/common/headings/SubHeading'
 import Resume from '@/components/pages/Resume/Resume'
-import React from 'react'
 
 export default function page() {
   return (

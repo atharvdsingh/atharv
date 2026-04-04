@@ -4,7 +4,6 @@ import { siteConfig } from "@/config/Meta.config";
 export default function sitemap(): MetadataRoute.Sitemap {
     const baseUrl = siteConfig.url;
 
-    // The actual available routes in your application
     const routes = [
         "",
         "/work",

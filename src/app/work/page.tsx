@@ -1,6 +1,5 @@
 import Container from "@/components/common/Container";
 import WorkPage from "@/components/pages/work/WorkPage";
-import React from "react";
 import { generateMetadata as getMetadata } from "@/config/Meta.config";
 import { Metadata } from "next";
 
@@ -23,7 +22,7 @@ export const metadata: Metadata = {
 export default function page() {
   return (
     <Container   >
-        <WorkPage/>
+      <WorkPage />
     </Container>
   );
 }
