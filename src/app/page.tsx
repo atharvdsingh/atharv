@@ -12,21 +12,33 @@ export default function Home() {
   return (
     <>
       <Container className="flex   flex-col   ">
-        <StaggerComponentForList  >
-
         <div className=" flex flex-col min-h-screen ">
-          <MainHeading />
-          <SubHeading className="text-sm py-4 ">
-            {basicInformationService.info}
-          </SubHeading>
+          <StaggerComponentForList idx={1}>
+            <MainHeading />
+          </StaggerComponentForList>
 
-          <SocialsLinks />
+          <StaggerComponentForList idx={2}>
+            <SubHeading className="text-sm py-4 ">
+              {basicInformationService.info}
+            </SubHeading>
+          </StaggerComponentForList>
 
-          <ExperienceHero />
-          <Project />
-          <Craft />
+          <StaggerComponentForList idx={3}>
+            <SocialsLinks />
+          </StaggerComponentForList>
+
+          <StaggerComponentForList idx={4}>
+            <ExperienceHero />
+          </StaggerComponentForList>
+
+          <StaggerComponentForList idx={5}>
+            <Project />
+          </StaggerComponentForList>
+
+          <StaggerComponentForList idx={6}>
+            <Craft />
+          </StaggerComponentForList>
         </div>
-        </StaggerComponentForList>
       </Container>
     </>
   );
