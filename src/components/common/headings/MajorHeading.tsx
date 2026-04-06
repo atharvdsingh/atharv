@@ -10,7 +10,7 @@ export default function MajorHeading({
   className?: string;
 }) {
   return (
-    <div
+    <h1
       className={cn(
         `text-xl font-bold whitespace-normal  text-foreground`,
         className,
@@ -18,6 +18,6 @@ export default function MajorHeading({
       )}
     >
       {children}
-    </div>
+    </h1>
   );
 }

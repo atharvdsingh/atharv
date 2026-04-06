@@ -11,17 +11,15 @@ export default function Footer() {
           <h1>NAVIGATE</h1>
           <div className="flex flex-wrap gap-x-7 ">
             {footerConfig.Navigate.map((item, index) => (
-              <SubHeading
-                key={index}
-                className="hover:text-foreground flex justify-center items-center "
-              >
-
-                <Link className="text-sm " href={item.href}>
-                <HapticFeedback feedback="selection" >
-                  {item.name}{" "}
-                </HapticFeedback>
-                </Link>
-              </SubHeading>
+              <HapticFeedback feedback="selection" key={index} >
+                <SubHeading
+                  className="hover:text-foreground flex justify-center items-center "
+                >
+                  <Link className="text-sm " href={item.href}>
+                    {item.name}
+                  </Link>
+                </SubHeading>
+              </HapticFeedback>
             ))}
           </div>
         </div>
