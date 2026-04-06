@@ -12,15 +12,15 @@ import ArrowRight from "@/components/svgs/ArrowRight";
 export default function ProjectsCard(project: Project) {
   return (
     <div className="flex flex-col">
-      <SubHeading className="flex cursor-pointer rounded-lg my-3 justify-between items-center ">
-        <SubHeading>
+      <div className="flex cursor-pointer rounded-lg my-3 justify-between items-center ">
+        <div>
           <Heading>{project.name}</Heading>
           <SubHeading>{project.description[0]}</SubHeading>
-        </SubHeading>
-        <SubHeading>
+        </div>
+        <div className="flex gap-2 items-center">
           {project.isLive && project.liveLink && (
-              <SubHeading className="hover:text-foreground transition-all duration-300 ease-in-out">
-            <Button variant={"link"}>
+            <div className="hover:text-foreground transition-all duration-300 ease-in-out">
+              <Button asChild variant={"link"}>
                 <Link
                   target="_blank"
                   href={project.liveLink}
@@ -29,21 +29,21 @@ export default function ProjectsCard(project: Project) {
                   Live
                   <ArrowRight />
                 </Link>
-            </Button>
-              </SubHeading>
+              </Button>
+            </div>
           )}
-            <Button variant={"link"}>
-              <Link
-                target="_blank"
-                href={project.github}
-                className="flex items-center gap-1"
-              >
-                GitHub
-                <ArrowRight />
-              </Link>
-            </Button>
-        </SubHeading>
-      </SubHeading>
+          <Button asChild variant={"link"}>
+            <Link
+              target="_blank"
+              href={project.github}
+              className="flex items-center gap-1"
+            >
+              GitHub
+              <ArrowRight />
+            </Link>
+          </Button>
+        </div>
+      </div>
       <div className="flex flex-col gap-3">
         <SubHeading className="text-foreground font-semibold">
           Technologies used
