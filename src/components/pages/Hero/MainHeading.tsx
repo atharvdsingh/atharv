@@ -15,10 +15,11 @@ export default function MainHeading() {
         className=" flex justify-center  aspect-square  rounded-full items-center object-fill inset-0 bg-lime-300  "
       />
       <div className="flex flex-col px-3 justify-start   ">
-        <Heading>{aboutConfig.name}</Heading>
+        <Heading as="h1">{aboutConfig.name}</Heading>
         <div className="flex flex-wrap items-center gap-x-1 justify-start ">
           {aboutConfig.craft.map((craft, index) => (
             <SubHeading
+              as="span"
               className="flex items-center gap-1 justify-center "
               key={index}
             >
@@ -27,7 +28,7 @@ export default function MainHeading() {
             </SubHeading>
           ))}
           <CopyToClickBoard className="px-0" text={aboutConfig.email}>
-            <div>{aboutConfig.email}</div>
+            <span>{aboutConfig.email}</span>
           </CopyToClickBoard>
         </div>
       </div>

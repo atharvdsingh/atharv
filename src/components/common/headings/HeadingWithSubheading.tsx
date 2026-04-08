@@ -12,11 +12,11 @@ export default function HeadingWithSubheading({
     subHeading: string;
 }) {
     return (
-        <div className="flex h-full flex-col gap-2" >
-            <Heading className="text-xl" >{heading}</Heading>
-            < SubHeading>{subHeading}</SubHeading>
+        <header className="flex h-full flex-col gap-2" >
+            <Heading as="h1" className="text-xl" >{heading}</Heading>
+            <SubHeading as="p">{subHeading}</SubHeading>
             <Separator className="my-5" />
 
-        </div>
+        </header>
     );
 }

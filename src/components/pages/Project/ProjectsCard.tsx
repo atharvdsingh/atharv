@@ -12,16 +12,17 @@ import ArrowRight from "@/components/svgs/ArrowRight";
 export default function ProjectsCard(project: Project) {
   return (
     <div className="flex flex-col">
-      <SubHeading className="flex cursor-pointer rounded-lg my-3 justify-between items-center ">
-        <SubHeading>
-          <Heading>{project.name}</Heading>
+      <div className="flex cursor-pointer rounded-lg my-3 justify-between items-center text-sm text-muted-foreground">
+        <div>
+          <Heading as="h3">{project.name}</Heading>
           <SubHeading>{project.description[0]}</SubHeading>
-        </SubHeading>
-        <SubHeading>
+        </div>
+        <div className="text-sm text-muted-foreground">
           {project.isLive && project.liveLink && (
-              <SubHeading className="hover:text-foreground transition-all duration-300 ease-in-out">
-            <Button variant={"link"}>
+            <SubHeading as="span" className="hover:text-foreground transition-all duration-300 ease-in-out">
+              <Button variant={"link"}>
                 <Link
+                  aria-label={`Live preview of ${project.name}`}
                   target="_blank"
                   href={project.liveLink}
                   className="flex items-center gap-1"
@@ -29,23 +30,24 @@ export default function ProjectsCard(project: Project) {
                   Live
                   <ArrowRight />
                 </Link>
-            </Button>
-              </SubHeading>
+              </Button>
+            </SubHeading>
           )}
-            <Button variant={"link"}>
-              <Link
-                target="_blank"
-                href={project.github}
-                className="flex items-center gap-1"
-              >
-                GitHub
-                <ArrowRight />
-              </Link>
-            </Button>
-        </SubHeading>
-      </SubHeading>
+          <Button variant={"link"}>
+            <Link
+              aria-label={`GitHub repository for ${project.name}`}
+              target="_blank"
+              href={project.github}
+              className="flex items-center gap-1"
+            >
+              GitHub
+              <ArrowRight />
+            </Link>
+          </Button>
+        </div>
+      </div>
       <div className="flex flex-col gap-3">
-        <SubHeading className="text-foreground font-semibold">
+        <SubHeading as="h4" className="text-foreground font-semibold">
           Technologies used
         </SubHeading>
         <div className="flex gap-3 flex-wrap ">
@@ -64,13 +66,13 @@ export default function ProjectsCard(project: Project) {
           })}
         </div>
 
-        <SubHeading className="text-foreground font-semibold">
+        <SubHeading as="h4" className="text-foreground font-semibold">
           Thing&apos;s i did{" "}
         </SubHeading>
         <ul>
           {project.description.map((descriptions, index) => (
             <li key={index}>
-              <SubHeading className="my-0 mx-2 ">{descriptions}</SubHeading>
+              <SubHeading as="span" className="my-0 mx-2 ">{descriptions}</SubHeading>
             </li>
           ))}
         </ul>

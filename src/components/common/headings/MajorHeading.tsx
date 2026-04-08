@@ -4,20 +4,22 @@ import React from "react";
 export default function MajorHeading({
   children,
   className,
+  as: Tag = "h2",
   ...props
 }: {
   children: React.ReactNode;
   className?: string;
+  as?: React.ElementType;
 }) {
   return (
-    <div
+    <Tag
       className={cn(
         `text-xl font-bold whitespace-normal  text-foreground`,
         className,
-        { ...props },
       )}
+      {...props}
     >
       {children}
-    </div>
+    </Tag>
   );
 }

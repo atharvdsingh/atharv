@@ -7,18 +7,19 @@ export default function SocialsLinks() {
     <div className="flex flex-wrap gap-2">
       {socialLinks.map((socialLinksItems, index) => (
         <Tooltip key={index}>
-          <TooltipTrigger
-            
-            className="text-sm size-8 border p-1 rounded-sm skill-inner-shadow  cursor-pointer hover:text-foreground  transition-all duration-300 text-muted-foreground  "
+          <TooltipTrigger asChild
+
+            className="text-sm size-8 border p-4 rounded-sm skill-inner-shadow  cursor-pointer hover:text-foreground  transition-all duration-300 text-muted-foreground  "
           >
             <Link
-            className=""
-            target="_blank"
-            href={socialLinksItems.href} >
-            {socialLinksItems.icon}
+              className=""
+              aria-label={`Social link for ${socialLinksItems.name}`}
+              target="_blank"
+              href={socialLinksItems.href} >
+              {socialLinksItems.icon}
             </Link>
           </TooltipTrigger>
-          <TooltipContent> {socialLinksItems.name} </TooltipContent>
+          <TooltipContent aria-label={`Social link for ${socialLinksItems.name}`} > {socialLinksItems.name} </TooltipContent>
         </Tooltip>
       ))}
     </div>

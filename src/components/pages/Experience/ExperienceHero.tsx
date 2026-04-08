@@ -17,12 +17,12 @@ export default function ExperienceHero() {
       ))}
       <div className="flex justify-center items-center " >
 
-  <Button className="cursor-pointer w-fit p-2 " variant={"outline"} >
-    <HapticFeedback feedback="light" >
+        <Button className="cursor-pointer w-fit p-2 " variant={"outline"} >
+          <HapticFeedback feedback="light" >
 
-    <Link  href={"/work"} > Show all work experience </Link>
-    </HapticFeedback>
-  </Button>
+            <Link aria-label="Show all work experience" href={"/work"} > Show all work experience </Link>
+          </HapticFeedback>
+        </Button>
       </div>
     </div>
   );

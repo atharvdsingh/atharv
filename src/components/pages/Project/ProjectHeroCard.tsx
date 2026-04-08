@@ -15,32 +15,32 @@ export default function ProjectHeroCard(project: Project) {
       <div className="flex justify-between w-full items-center ">
         <div className="flex flex-col  justify-center  ">
           <div className="flex      items-center  gap-2">
-            <Heading> {project.name} </Heading>
-            <SubHeading className="hover:text-foreground transition-all duration-300 ease-in-out ">
+            <Heading as="h3"> {project.name} </Heading>
+            <SubHeading as="span" className="hover:text-foreground transition-all duration-300 ease-in-out ">
               {" "}
 
-              <Link target="_blank" href={project.liveLink!} >
+              <Link aria-label={`Live preview of ${project.name}`} target="_blank" href={project.liveLink!} >
                 <Globe size={20} />
               </Link>
             </SubHeading>
-            <SubHeading className="hover:text-foreground">
-              <Link target="_blank" href={project.github} >
+            <SubHeading as="span" className="hover:text-foreground">
+              <Link aria-label={`GitHub repository for ${project.name}`} target="_blank" href={project.github} >
                 <Github className="size-5 fill-muted-foreground hover:fill-foreground transition-all duration-300 ease-in-out  " />
               </Link>
             </SubHeading>
           </div>
           <SubHeading> {project.description[0]} </SubHeading>
         </div>
-          { project.isLive &&(
+        {project.isLive && (
 
-            <Button className="text-center" asChild variant={"link"}>
+          <Button className="text-center" asChild variant={"link"}>
 
-          <Link target="_blank" href={project.liveLink! || "/"}>
-            Live Link <MoveRight />
-          </Link>
-        </Button>
+            <Link aria-label={`Live preview of ${project.name}`} target="_blank" href={project.liveLink! || "/"}>
+              Live Link <MoveRight />
+            </Link>
+          </Button>
         )
-          }
+        }
       </div>
     </div>
   );

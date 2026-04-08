@@ -6,34 +6,35 @@ import GhostButton from "../../common/GhostButton";
 export default function WorkCard(experience: Experience) {
   return (
     <div className="flex flex-col">
-      <SubHeading className="flex cursor-pointer rounded-lg my-3 justify-between items-center ">
-        <SubHeading>
+      <div className="flex cursor-pointer rounded-lg my-3 justify-between items-center text-sm text-muted-foreground">
+        <div>
           <Heading
+            as="h3"
             className={` border-b-foreground ${experience.isBlur ? "blur-sm" : ""} `}
           >
             {experience.isBlur ? (
-              <Heading>sorry, can't tell </Heading>
+              <span>sorry, can&apos;t tell </span>
             ) : (
               experience.company
             )}
           </Heading>
-          <SubHeading> {experience.position} </SubHeading>
-        </SubHeading>
-        <SubHeading>
-          <SubHeading>
+          <SubHeading as="span"> {experience.position} </SubHeading>
+        </div>
+        <div className="text-sm text-muted-foreground">
+          <SubHeading as="span">
             {experience.startDate}-
             {experience.endDate ? experience.endDate : "Present"}
           </SubHeading>
-          <SubHeading className="flex gap-2 ">
+          <SubHeading as="span" className="flex gap-2 ">
             {experience.location}
-            <div className="sm:flex  hidden ">
+            <span className="sm:flex  hidden ">
               {experience.locationFlexibility}
-            </div>
+            </span>
           </SubHeading>
-        </SubHeading>
-      </SubHeading>
+        </div>
+      </div>
       <div className="flex flex-col gap-3">
-        <SubHeading className="text-foreground font-semibold">
+        <SubHeading as="h4" className="text-foreground font-semibold">
           Technologies used
         </SubHeading>
         <div className="flex gap-3 flex-wrap ">
@@ -52,14 +53,14 @@ export default function WorkCard(experience: Experience) {
           })}
         </div>
 
-        <SubHeading className="text-foreground font-semibold">
-          Thing's i did{" "}
+        <SubHeading as="h4" className="text-foreground font-semibold">
+          Thing&apos;s i did{" "}
         </SubHeading>
         <ul>
           {experience.description.map((descriptions, index) => (
             <li key={index} >
 
-              <SubHeading  className="my-0 mx-2 "> {descriptions} </SubHeading>
+              <SubHeading as="span" className="my-0 mx-2 "> {descriptions} </SubHeading>
             </li>
           ))}
         </ul>

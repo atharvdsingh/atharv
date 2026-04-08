@@ -8,8 +8,7 @@ export default function Resume() {
   return (
     <div className="flex h-full mt-10 flex-col gap-5">
       <div>
-        <Heading>Resume</Heading>
-        {/* <SubHeading>This is my resume</SubHeading> */}
+        <Heading as="h1">Resume</Heading>
         <CopyToClickBoard text={ResumeConfig.href}>
           Copy Resume
         </CopyToClickBoard>
