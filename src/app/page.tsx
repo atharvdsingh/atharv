@@ -6,26 +6,38 @@ import SocialsLinks from "@/components/pages/Hero/SocialsLinks";
 import { basicInformationService } from "@/config/BasicInformation.config";
 import Project from "@/components/pages/Hero/Project";
 import Craft from "@/components/pages/Hero/Craft";
-
+import StaggerComponentForList from "@/components/animations/StaggerComponentForList";
 
 export default function Home() {
   return (
     <>
       <Container className="flex   flex-col   ">
         <div className=" flex flex-col min-h-screen ">
-          <MainHeading />
+          <StaggerComponentForList idx={1}>
+            <MainHeading />
+          </StaggerComponentForList>
 
-          <SubHeading as="p" className="text-sm py-4 ">
-            {basicInformationService.info}
-          </SubHeading>
+          <StaggerComponentForList idx={2}>
+            <SubHeading className="text-sm py-4 ">
+              {basicInformationService.info}
+            </SubHeading>
+          </StaggerComponentForList>
 
-          <SocialsLinks />
+          <StaggerComponentForList idx={3}>
+            <SocialsLinks />
+          </StaggerComponentForList>
 
-          <ExperienceHero />
+          <StaggerComponentForList idx={4}>
+            <ExperienceHero />
+          </StaggerComponentForList>
 
-          <Project />
+          <StaggerComponentForList idx={5}>
+            <Project />
+          </StaggerComponentForList>
 
-          <Craft />
+          <StaggerComponentForList idx={6}>
+            <Craft />
+          </StaggerComponentForList>
         </div>
       </Container>
     </>

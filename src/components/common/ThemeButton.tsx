@@ -21,6 +21,7 @@ export function ThemeButton() {
   }, []);
   const handleThemeChange = () => {
     setTheme(theme === "dark" ? "light" : "dark");
+    console.log(systemTheme);
   };
 
   return (

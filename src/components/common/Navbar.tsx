@@ -13,14 +13,15 @@ export default function Navbar() {
       <div className="flex inset-x-0 top-0 py-3 fixed max-w-3xl z-50  px-2 rounded-2xl backdrop-blur-sm mx-auto items-center justify-between">
         <div className="flex gap-8 items-center justify-evenly">
           {navbarConfig.navItems.map((navItem, index) => (
-            <HapticFeedback feedback="light" key={index} >
-              <SubHeading
-                as="div"
-                className="hover:text-accent-foreground duration-200 cursor-pointer"
-              >
-                <Link href={navItem.href}>{navItem.label}</Link>
-              </SubHeading>
-            </HapticFeedback>
+            <SubHeading
+              className="   hover:text-accent-foreground duration-200 cursor-pointer "
+              key={index}
+            >
+              <HapticFeedback feedback="light" >
+
+              <Link href={navItem.href}>{navItem.label}</Link>
+              </HapticFeedback>
+            </SubHeading>
           ))}
         </div>
         <div>

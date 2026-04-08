@@ -1,7 +1,7 @@
 import HeadingWithSubheading from "../../common/headings/HeadingWithSubheading";
 import { book } from "@/config/Book.config";
 import BookCard from "./BookCard";
-
+import StaggerComponentForList from "@/components/animations/StaggerComponentForList";
 
 export default function Book() {
   return (
@@ -12,7 +12,10 @@ export default function Book() {
       />
       <div className="flex flex-col gap-5">
         {book.map((b, index) => (
+          <StaggerComponentForList key={index} idx={index} >
+
           <BookCard {...b} key={index} />
+          </StaggerComponentForList>
         ))}
       </div>
     </div>
