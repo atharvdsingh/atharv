@@ -11,6 +11,7 @@ import GoToTop from "@/components/common/GoToTop";
 // import { generateMetadata as getMetadata } from "@/config/Meta.config";
 import Blur from "@/components/common/Blur";
 import  type {Metadata}  from "next";
+import Script from "next/script";
 
 const hanken_Groktesk = Hanken_Grotesk({
   subsets: ["latin"],
@@ -83,6 +84,13 @@ export default function RootLayout({
           >
             <TooltipProvider>
               <Navbar />
+              <Script 
+              src="https://example-analytics.com/script.js" 
+        strategy="afterInteractive"
+
+              >
+
+              </Script>
 
               {children}
               <Analytics />
