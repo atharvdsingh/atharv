@@ -18,7 +18,7 @@ export default function Home() {
           </StaggerComponentForList>
 
           <StaggerComponentForList idx={2}>
-            <SubHeading className="text-sm py-4 ">
+            <SubHeading as="p" className="text-sm py-4 ">
               {basicInformationService.info}
             </SubHeading>
           </StaggerComponentForList>

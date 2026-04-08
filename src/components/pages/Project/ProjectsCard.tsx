@@ -14,8 +14,8 @@ export default function ProjectsCard(project: Project) {
     <div className="flex flex-col">
       <div className="flex cursor-pointer rounded-lg my-3 justify-between items-center ">
         <div>
-          <Heading>{project.name}</Heading>
-          <SubHeading>{project.description[0]}</SubHeading>
+          <Heading as="h3">{project.name}</Heading>
+          <SubHeading as="p">{project.description[0]}</SubHeading>
         </div>
         <div className="flex gap-2 items-center">
           {project.isLive && project.liveLink && (
@@ -45,7 +45,7 @@ export default function ProjectsCard(project: Project) {
         </div>
       </div>
       <div className="flex flex-col gap-3">
-        <SubHeading className="text-foreground font-semibold">
+        <SubHeading as="p" className="text-foreground font-semibold">
           Technologies used
         </SubHeading>
         <div className="flex gap-3 flex-wrap ">
@@ -64,13 +64,13 @@ export default function ProjectsCard(project: Project) {
           })}
         </div>
 
-        <SubHeading className="text-foreground font-semibold">
+        <SubHeading as="h4" className="text-foreground font-semibold">
           Thing&apos;s i did{" "}
         </SubHeading>
         <ul>
           {project.description.map((descriptions, index) => (
             <li key={index}>
-              <SubHeading className="my-0 mx-2 ">{descriptions}</SubHeading>
+              <SubHeading as="p" className="my-0 mx-2 ">{descriptions}</SubHeading>
             </li>
           ))}
         </ul>

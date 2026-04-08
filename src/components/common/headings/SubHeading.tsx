@@ -1,8 +1,8 @@
 import { cn } from '@/lib/utils'
 import React from 'react'
 
-export default function SubHeading({ children, className, ...props }: { children: React.ReactNode, className?: string }) {
+export default function SubHeading({ children, className, as: Component = "h2", ...props }: { children: React.ReactNode, className?: string, as?: React.ElementType, [key: string]: any }) {
   return (
-    <p className={cn(`text-sm   text-muted-foreground`, className)} {...props} >{children} </p>
+    <Component className={cn(`text-sm   text-muted-foreground`, className)} {...props} >{children} </Component>
   )
 }
