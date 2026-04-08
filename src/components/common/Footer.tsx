@@ -11,6 +11,7 @@ export default function Footer() {
           <h2 className="text-lg font-bold">NAVIGATE</h2>
           <div className="flex flex-wrap gap-x-7 ">
             {footerConfig.Navigate.map((item, index) => (
+<<<<<<< HEAD
               <HapticFeedback feedback="selection" key={index} >
                 <SubHeading
                   as="div"
@@ -21,6 +22,19 @@ export default function Footer() {
                   </Link>
                 </SubHeading>
               </HapticFeedback>
+=======
+              <SubHeading
+                key={index}
+                className="hover:text-foreground flex justify-center items-center "
+              >
+
+                <Link className="text-sm " href={item.href}>
+                <HapticFeedback feedback="selection" >
+                  {item.name}{" "}
+                </HapticFeedback>
+                </Link>
+              </SubHeading>
+>>>>>>> parent of 14b3e71 (fix:image loading)
             ))}
           </div>
         </div>

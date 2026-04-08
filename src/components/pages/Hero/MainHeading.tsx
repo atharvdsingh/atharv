@@ -10,9 +10,6 @@ export default function MainHeading() {
       <Image
         src={aboutConfig.image || "/main.webp"}
         alt={aboutConfig.name}
-        loading="eager"
-        fetchPriority="high"
-        preload
         width={100}
         height={100}
         className=" flex justify-center  aspect-square  rounded-full items-center object-fill inset-0 bg-lime-300  "
