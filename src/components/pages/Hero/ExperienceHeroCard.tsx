@@ -5,27 +5,31 @@ import Heading from "../../common/headings/Heading";
 
 export default function ExperienceHeroCard(experience: Experience) {
   return (
-    <div className="flex cursor-pointer rounded-lg my-3 justify-between items-center ">
-      <div>
-        {experience.isBlur ? (
-          <Heading className="border-b-foreground blur-sm ">sorry, can't tell </Heading>
-        ) : (
-          <Heading className="border-b-foreground ">{experience.company}</Heading>
-        )}
+    <SubHeading className="flex      cursor-pointer rounded-lg my-3 justify-between items-center ">
+      <SubHeading>
+        <Heading
+          className={` border-b-foreground ${experience.isBlur ? "blur-sm" : ""} `}
+        >
+          {experience.isBlur ? (
+            <Heading>sorry, can't tell </Heading>
+          ) : (
+            experience.company
+          )}
+        </Heading>
         <SubHeading> {experience.position} </SubHeading>
-      </div>
-      <div>
+      </SubHeading>
+      <SubHeading>
         <SubHeading>
           {experience.startDate}-
           {experience.endDate ? experience.endDate : "Present"}
         </SubHeading>
         <SubHeading className="flex gap-2 " >
-          {experience.location}
-          <span className="sm:flex  hidden ">
+          {experience.location} 
+          <div className="sm:flex  hidden ">
             {experience.locationFlexibility}
-          </span>
+          </div>
         </SubHeading>
-      </div>
-    </div>
+      </SubHeading>
+    </SubHeading>
   );
 }
