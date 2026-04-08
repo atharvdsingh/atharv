@@ -12,6 +12,7 @@ export default function MainHeading() {
         alt={aboutConfig.name}
         width={100}
         height={100}
+        loading="eager"
         className=" flex justify-center  aspect-square  rounded-full items-center object-fill inset-0 bg-lime-300  "
       />
       <div className="flex flex-col px-3 justify-start   ">

@@ -8,14 +8,14 @@ export default function SocialsLinks() {
       {socialLinks.map((socialLinksItems, index) => (
         <Tooltip key={index}>
           <TooltipTrigger asChild
-
-            className="text-sm size-8 border p-4 rounded-sm skill-inner-shadow  cursor-pointer hover:text-foreground  transition-all duration-300 text-muted-foreground  "
+            className="text-sm size-8 border p-1 flex items-center justify-center rounded-sm skill-inner-shadow cursor-pointer hover:text-foreground transition-all duration-300 text-muted-foreground"
           >
             <Link
-              className=""
+              className="relative z-10 [&>svg]:size-full"
               aria-label={`Social link for ${socialLinksItems.name}`}
               target="_blank"
-              href={socialLinksItems.href} >
+              href={socialLinksItems.href}
+            >
               {socialLinksItems.icon}
             </Link>
           </TooltipTrigger>
