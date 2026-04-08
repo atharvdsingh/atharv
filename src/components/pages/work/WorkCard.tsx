@@ -9,18 +9,18 @@ export default function WorkCard(experience: Experience) {
       <div className="flex cursor-pointer rounded-lg my-3 justify-between items-center ">
         <div>
           {experience.isBlur ? (
-            <Heading className="border-b-foreground blur-sm ">sorry, can't tell </Heading>
+            <Heading as="h3" className="border-b-foreground blur-sm ">sorry, can't tell </Heading>
           ) : (
-            <Heading className="border-b-foreground ">{experience.company}</Heading>
+            <Heading as="h3" className="border-b-foreground ">{experience.company}</Heading>
           )}
-          <SubHeading> {experience.position} </SubHeading>
+          <SubHeading as="p"> {experience.position} </SubHeading>
         </div>
         <div>
-          <SubHeading>
+          <SubHeading as="p">
             {experience.startDate}-
             {experience.endDate ? experience.endDate : "Present"}
           </SubHeading>
-          <SubHeading className="flex gap-2 ">
+          <SubHeading as="p" className="flex gap-2 ">
             {experience.location}
             <span className="sm:flex hidden ">
               {experience.locationFlexibility}
@@ -29,7 +29,7 @@ export default function WorkCard(experience: Experience) {
         </div>
       </div>
       <div className="flex flex-col gap-3">
-        <SubHeading className="text-foreground font-semibold">
+        <SubHeading as="h4" className="text-foreground font-semibold">
           Technologies used
         </SubHeading>
         <div className="flex gap-3 flex-wrap ">
@@ -48,14 +48,14 @@ export default function WorkCard(experience: Experience) {
           })}
         </div>
 
-        <SubHeading className="text-foreground font-semibold">
+        <SubHeading as="h4" className="text-foreground font-semibold">
           Thing's i did{" "}
         </SubHeading>
         <ul>
           {experience.description.map((descriptions, index) => (
             <li key={index} >
 
-              <SubHeading className="my-0 mx-2 "> {descriptions} </SubHeading>
+              <SubHeading as="p" className="my-0 mx-2 "> {descriptions} </SubHeading>
             </li>
           ))}
         </ul>

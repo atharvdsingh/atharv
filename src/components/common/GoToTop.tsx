@@ -8,7 +8,6 @@ export default function GoToTop() {
   const [visible, setVisible] = useState<boolean>(false);
   useEffect(() => {
     const toggleVisibility = () => {
-        console.log(window.scrollY)
       if (window.scrollY > 3) {setVisible(true);}
       else {setVisible(false)}
     };

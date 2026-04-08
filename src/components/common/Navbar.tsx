@@ -15,6 +15,7 @@ export default function Navbar() {
           {navbarConfig.navItems.map((navItem, index) => (
             <HapticFeedback feedback="light" key={index} >
               <SubHeading
+                as="div"
                 className="hover:text-accent-foreground duration-200 cursor-pointer"
               >
                 <Link href={navItem.href}>{navItem.label}</Link>
