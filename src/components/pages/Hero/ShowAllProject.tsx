@@ -11,7 +11,7 @@ export default function ShowAllProject() {
     }
   }
   return (
-    <Button onClick={handleonclick} className="cursor-pointer w-fit p-2 " variant={"outline"}>
+    <Button asChild onClick={handleonclick} className="cursor-pointer w-fit p-2 " variant={"outline"}>
       <Link aria-label="Show all Projects" href={"/projects"}> Show all Projects </Link>
     </Button>
   );
