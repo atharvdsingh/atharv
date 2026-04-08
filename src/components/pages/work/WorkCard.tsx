@@ -6,7 +6,6 @@ import GhostButton from "../../common/GhostButton";
 export default function WorkCard(experience: Experience) {
   return (
     <div className="flex flex-col">
-<<<<<<< HEAD
       <div className="flex cursor-pointer rounded-lg my-3 justify-between items-center ">
         <div>
           {experience.isBlur ? (
@@ -18,23 +17,6 @@ export default function WorkCard(experience: Experience) {
         </div>
         <div>
           <SubHeading as="p">
-=======
-      <SubHeading className="flex cursor-pointer rounded-lg my-3 justify-between items-center ">
-        <SubHeading>
-          <Heading
-            className={` border-b-foreground ${experience.isBlur ? "blur-sm" : ""} `}
-          >
-            {experience.isBlur ? (
-              <Heading>sorry, can't tell </Heading>
-            ) : (
-              experience.company
-            )}
-          </Heading>
-          <SubHeading> {experience.position} </SubHeading>
-        </SubHeading>
-        <SubHeading>
-          <SubHeading>
->>>>>>> parent of 14b3e71 (fix:image loading)
             {experience.startDate}-
             {experience.endDate ? experience.endDate : "Present"}
           </SubHeading>
@@ -44,8 +26,8 @@ export default function WorkCard(experience: Experience) {
               {experience.locationFlexibility}
             </div>
           </SubHeading>
-        </SubHeading>
-      </SubHeading>
+        </div>
+      </div>
       <div className="flex flex-col gap-3">
         <SubHeading as="h4" className="text-foreground font-semibold">
           Technologies used
@@ -73,11 +55,7 @@ export default function WorkCard(experience: Experience) {
           {experience.description.map((descriptions, index) => (
             <li key={index} >
 
-<<<<<<< HEAD
               <SubHeading as="p" className="my-0 mx-2 "> {descriptions} </SubHeading>
-=======
-              <SubHeading  className="my-0 mx-2 "> {descriptions} </SubHeading>
->>>>>>> parent of 14b3e71 (fix:image loading)
             </li>
           ))}
         </ul>
