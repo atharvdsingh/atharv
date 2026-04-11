@@ -9,5 +9,5 @@ export default function Container({
   children: React.ReactNode;
   className?: string;
 }) {
-  return <div className={cn("max-w-3xl  mx-auto p-4   ")}>{children}</div>;
+  return <div {...props}  className={cn("max-w-3xl  mx-auto p-4   ")}>{children}</div>;
 }

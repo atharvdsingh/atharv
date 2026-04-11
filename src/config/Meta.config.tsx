@@ -3,6 +3,7 @@ import { aboutConfig } from "./About.config";
 import { contactConfig } from "./Contact.config";
 import { socialLinks } from "./SocialLinks.config";
 import { Meta } from "@/types/config";
+import type { Metadata } from "next";
 import { basicInformationService } from "./BasicInformation.config";
 
 export const siteConfig = {
@@ -131,7 +132,7 @@ export const getPageMetadata = (pathname: string) => {
   return pageMetadata[pathname] || pageMetadata["/"];
 };
 
-export const generateMetadata = (pathname: string) => {
+export const generateMetadata = (pathname: string): Metadata => {
   const pageMeta = getPageMetadata(pathname);
   return {
     metadataBase: new URL(siteConfig.url),

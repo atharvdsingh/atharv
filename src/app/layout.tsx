@@ -8,7 +8,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import Footer from "@/components/common/Footer";
 import { Analytics } from "@vercel/analytics/next";
 import GoToTop from "@/components/common/GoToTop";
-// import { generateMetadata as getMetadata } from "@/config/Meta.config";
+import { generateMetadata as getMetadata } from "@/config/Meta.config";
 import Blur from "@/components/common/Blur";
 import type { Metadata } from "next";
 
@@ -18,44 +18,7 @@ const hanken_Groktesk = Hanken_Grotesk({
   variable: "--font-hanken",
 });
 
-export const metadata: Metadata = {
-  title: {
-    default: "Atharv dev singh full stack developer ",
-    template: "%s | Microveda Lab",
-  },
-  description:
-    "Atharv dev singh i'm a full stack developer based in india, i worked as a full stack developer ",
-
-  keywords: [
-    "Atharv Dev Singh",
-    "University of Allahabad",
-    "Full stack ",
-    "Devops ",
-    "Atharv",
-    "Atharv dev ",
-    "Backend",
-    "Sanchetna",
-    "Atharv Sanchetna",
-  ],
-
-  authors: [{ name: "Atharv Dev Singh" }],
-
-  metadataBase: new URL("https://atharv.sanchetna.in"),
-
-  openGraph: {
-    title: "Atharv Dev singh",
-    description:
-      "Atharv dev singh i'm a full stack developer based in india, i worked as a full stack developer ",
-    url: "https://atharv.sanchetna.in",
-    siteName: "Atharv Dev Singh",
-    type: "website",
-  },
-
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
+export const metadata:Metadata=getMetadata("/")
 export default function RootLayout({
   children,
 }: Readonly<{
