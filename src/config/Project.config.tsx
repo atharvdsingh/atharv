@@ -4,7 +4,7 @@ import { technologyConfig } from "./Technology.config";
 const bookchetna: Project = {
   name: "BookChetna",
   image: "/project/bookchetna.png",
-  description: ["Peer to Peer Book Exchange Platform",""],
+  description: ["Peer to Peer Book Exchange Platform"],
   stack:[
     ...technologyConfig
   ],

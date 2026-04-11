@@ -69,10 +69,10 @@ export default function ProjectsCard(project: Project) {
         <SubHeading as="h4" className="text-foreground font-semibold">
           Thing&apos;s i did{" "}
         </SubHeading>
-        <ul>
+        <ul className="ml-2" >
           {project.description.map((descriptions, index) => (
-            <li key={index}>
-              <SubHeading as="span" className="my-0 mx-2 ">{descriptions}</SubHeading>
+            <li className="list-disc" key={index}>
+              <SubHeading as="span" className=" ">{descriptions}</SubHeading>
             </li>
           ))}
         </ul>
