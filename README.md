@@ -45,23 +45,23 @@ pnpm run build
 
 All your personal data lives in **`src/config/`**. Edit these files and the portfolio updates automatically — no need to touch any component code.
 
-| # | Config File | What It Does |
-|---|-------------|-------------|
-| 1 | `About.config.tsx` | Your name, profile photo, roles, and email |
-| 2 | `BasicInformation.config.tsx` | Hero tagline and short bio |
-| 3 | `Experience.config.tsx` | Work experience entries (company, role, dates, description, tech stack) |
-| 4 | `Project.config.tsx` | Projects with screenshots, descriptions, GitHub & live links |
-| 5 | `Technology.config.tsx` | Your skills and tech stack displayed on the homepage |
-| 6 | `SocialLinks.config.tsx` | Social media links (X, LinkedIn, GitHub, Instagram, email) |
-| 7 | `Contact.config.tsx` | Contact form labels, placeholders, and messages |
-| 8 | `Resume.config.tsx` | Link to your hosted resume (Google Drive, etc.) |
-| 9 | `Book.config.tsx` | Favourite books grouped by category |
-| 10 | `Movies.config.tsx` | Favourite movies with IMDb links |
-| 11 | `Gear.config.tsx` | Devices and tools you use daily |
-| 12 | `Craft.config.tsx` | Craft section links (Gears, Books, Movies pages) |
-| 13 | `Navbar.config.tsx` | Navigation bar items and routes |
-| 14 | `Footer.config.tsx` | Footer navigation links and social icons |
-| 15 | `Meta.config.tsx` | SEO metadata, Open Graph, and Twitter Cards for every page |
+| #   | Config File                   | What It Does                                                            |
+| --- | ----------------------------- | ----------------------------------------------------------------------- |
+| 1   | `About.config.tsx`            | Your name, profile photo, roles, and email                              |
+| 2   | `BasicInformation.config.tsx` | Hero tagline and short bio                                              |
+| 3   | `Experience.config.tsx`       | Work experience entries (company, role, dates, description, tech stack) |
+| 4   | `Project.config.tsx`          | Projects with screenshots, descriptions, GitHub & live links            |
+| 5   | `Technology.config.tsx`       | Your skills and tech stack displayed on the homepage                    |
+| 6   | `SocialLinks.config.tsx`      | Social media links (X, LinkedIn, GitHub, Instagram, email)              |
+| 7   | `Contact.config.tsx`          | Contact form labels, placeholders, and messages                         |
+| 8   | `Resume.config.tsx`           | Link to your hosted resume (Google Drive, etc.)                         |
+| 9   | `Book.config.tsx`             | Favourite books grouped by category                                     |
+| 10  | `Movies.config.tsx`           | Favourite movies with IMDb links                                        |
+| 11  | `Gear.config.tsx`             | Devices and tools you use daily                                         |
+| 12  | `Craft.config.tsx`            | Craft section links (Gears, Books, Movies pages)                        |
+| 13  | `Navbar.config.tsx`           | Navigation bar items and routes                                         |
+| 14  | `Footer.config.tsx`           | Footer navigation links and social icons                                |
+| 15  | `Meta.config.tsx`             | SEO metadata, Open Graph, and Twitter Cards for every page              |
 
 > All config types are defined in `src/types/config.ts` — your editor will auto-complete every field.
 
@@ -90,16 +90,16 @@ NEXT_PUBLIC_URL=https://your-domain.com
 
 ## 🧰 Tech Stack
 
-| Layer | Technology |
-|-------|-----------|
-| Framework | Next.js 16 (App Router) |
-| Language | TypeScript 5 |
-| Styling | Tailwind CSS 4 |
-| Animations | Motion |
-| UI | Radix UI + shadcn/ui |
-| Icons | Lucide React |
-| Analytics | Vercel Analytics |
-| Theming | next-themes |
+| Layer      | Technology              |
+| ---------- | ----------------------- |
+| Framework  | Next.js 16 (App Router) |
+| Language   | TypeScript 5            |
+| Styling    | Tailwind CSS 4          |
+| Animations | Motion                  |
+| UI         | Radix UI + shadcn/ui    |
+| Icons      | Lucide React            |
+| Analytics  | Vercel Analytics        |
+| Theming    | next-themes             |
 
 ---
 

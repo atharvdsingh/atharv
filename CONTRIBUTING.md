@@ -66,14 +66,14 @@ src/
 
 Follow the [Conventional Commits](https://www.conventionalcommits.org/) format:
 
-| Prefix     | Usage                          |
-| ---------- | ------------------------------ |
-| `feat:`    | New feature                    |
-| `fix:`     | Bug fix                        |
-| `docs:`    | Documentation changes          |
-| `style:`   | Formatting, no code change     |
-| `refactor:`| Code restructuring             |
-| `chore:`   | Build tools, dependencies, etc.|
+| Prefix      | Usage                           |
+| ----------- | ------------------------------- |
+| `feat:`     | New feature                     |
+| `fix:`      | Bug fix                         |
+| `docs:`     | Documentation changes           |
+| `style:`    | Formatting, no code change      |
+| `refactor:` | Code restructuring              |
+| `chore:`    | Build tools, dependencies, etc. |
 
 ---
 
