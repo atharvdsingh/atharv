@@ -10,17 +10,15 @@ import Mail from "@/components/svgs/Mail";
 import { socialLinks } from "./SocialLinks.config";
 
 export const footerConfig: Footer = {
-    Navigate: [
-        { name: "Home", href: "/" },
-        { name: "Work", href: "/work" },
-        // { name: "Blog", href: "/blog" },
-        { name: "Resume", href: "/resume" },
-        { name: "Projects", href: "/projects" },
-        { name: "Gears", href: "/gears" },
-        { name: "Books", href: "/books" },
-        { name: "Movies", href: "/movies" },
-    ],
-    contact: [
-        ...socialLinks
-         ]
-}
+  Navigate: [
+    { name: "Home", href: "/" },
+    { name: "Work", href: "/work" },
+    // { name: "Blog", href: "/blog" },
+    { name: "Resume", href: "/resume" },
+    { name: "Projects", href: "/projects" },
+    { name: "Gears", href: "/gears" },
+    { name: "Books", href: "/books" },
+    { name: "Movies", href: "/movies" },
+  ],
+  contact: [...socialLinks],
+};

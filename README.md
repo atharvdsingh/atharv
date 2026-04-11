@@ -47,4 +47,4 @@ Feel free to open issues or submit pull requests if you find bugs or want to imp
 
 ---
 
-*This README was generated to help contributors quickly get started with customizing the portfolio.*
+_This README was generated to help contributors quickly get started with customizing the portfolio._

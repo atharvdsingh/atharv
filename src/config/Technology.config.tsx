@@ -18,42 +18,42 @@ import GitHubActions from "@/components/technologies/GitHubActions";
 import Playwright from "@/components/technologies/Playwright";
 import { Technology, TechnologyEnum } from "@/types/config";
 
- const languages: Technology[] = [
-    { name: "TypeScript", icon: TypeScript, type: TechnologyEnum.LANGUAGE },
-    { name: "JavaScript", icon: JavaScript, type: TechnologyEnum.LANGUAGE },
-    { name: "Python", icon: Python, type: TechnologyEnum.LANGUAGE },
+const languages: Technology[] = [
+  { name: "TypeScript", icon: TypeScript, type: TechnologyEnum.LANGUAGE },
+  { name: "JavaScript", icon: JavaScript, type: TechnologyEnum.LANGUAGE },
+  { name: "Python", icon: Python, type: TechnologyEnum.LANGUAGE },
 ];
 
- const frontend: Technology[] = [
-    { name: "React", icon: ReactIcon, type: TechnologyEnum.FRONTEND },
-    { name: "Next.js", icon: NextJs, type: TechnologyEnum.FRONTEND },
+const frontend: Technology[] = [
+  { name: "React", icon: ReactIcon, type: TechnologyEnum.FRONTEND },
+  { name: "Next.js", icon: NextJs, type: TechnologyEnum.FRONTEND },
 ];
 
- const backendAndDatabase: Technology[] = [
-    { name: "Nest.js", icon: NestJs, type: TechnologyEnum.BACKEND },
-    { name: "Express.js", icon: ExpressJs, type: TechnologyEnum.BACKEND },
-    { name: "MongoDB", icon: MongoDB, type: TechnologyEnum.DATABASE },
-    { name: "PostgreSQL", icon: PostgreSQL, type: TechnologyEnum.DATABASE },
-    { name: "Redis", icon: Redis, type: TechnologyEnum.DATABASE },
-    { name: "Kafka", icon: Kafka, type: TechnologyEnum.BACKEND },
-    { name: "WebSocket", icon: SocketIo, type: TechnologyEnum.BACKEND },
-    { name: "Prisma", icon: Prisma, type: TechnologyEnum.DATABASE },
+const backendAndDatabase: Technology[] = [
+  { name: "Nest.js", icon: NestJs, type: TechnologyEnum.BACKEND },
+  { name: "Express.js", icon: ExpressJs, type: TechnologyEnum.BACKEND },
+  { name: "MongoDB", icon: MongoDB, type: TechnologyEnum.DATABASE },
+  { name: "PostgreSQL", icon: PostgreSQL, type: TechnologyEnum.DATABASE },
+  { name: "Redis", icon: Redis, type: TechnologyEnum.DATABASE },
+  { name: "Kafka", icon: Kafka, type: TechnologyEnum.BACKEND },
+  { name: "WebSocket", icon: SocketIo, type: TechnologyEnum.BACKEND },
+  { name: "Prisma", icon: Prisma, type: TechnologyEnum.DATABASE },
 ];
 
- const devops: Technology[] = [
-    { name: "Docker", icon: Docker, type: TechnologyEnum.DEVOPS },
-    { name: "Kubernetes", icon: Kubernetes, type: TechnologyEnum.DEVOPS },
-    { name: "AWS", icon: AWS, type: TechnologyEnum.DEVOPS },
-    { name: "CI/CD", icon: GitHubActions, type: TechnologyEnum.DEVOPS },
+const devops: Technology[] = [
+  { name: "Docker", icon: Docker, type: TechnologyEnum.DEVOPS },
+  { name: "Kubernetes", icon: Kubernetes, type: TechnologyEnum.DEVOPS },
+  { name: "AWS", icon: AWS, type: TechnologyEnum.DEVOPS },
+  { name: "CI/CD", icon: GitHubActions, type: TechnologyEnum.DEVOPS },
 ];
 
- const testing: Technology[] = [
-    { name: "Playwright", icon: Playwright, type: TechnologyEnum.TESTING },
+const testing: Technology[] = [
+  { name: "Playwright", icon: Playwright, type: TechnologyEnum.TESTING },
 ];
 export const technologyConfig: Technology[] = [
-    ...languages,
-    ...frontend,
-    ...backendAndDatabase,
-    ...devops,
-    ...testing,
+  ...languages,
+  ...frontend,
+  ...backendAndDatabase,
+  ...devops,
+  ...testing,
 ];

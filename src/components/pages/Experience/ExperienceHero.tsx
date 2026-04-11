@@ -15,11 +15,13 @@ export default function ExperienceHero() {
       {experienceConfig.map((exp, index) => (
         <ExperienceHeroCard key={index} {...exp} />
       ))}
-      <div className="flex justify-center items-center " >
-
-        <HapticFeedback feedback="light" >
-          <Button asChild className="cursor-pointer px-2 "  variant={"outline"} >
-            <Link aria-label="Show all work experience" href={"/work"} > Show all work experience </Link>
+      <div className="flex justify-center items-center ">
+        <HapticFeedback feedback="light">
+          <Button asChild className="cursor-pointer px-2 " variant={"outline"}>
+            <Link aria-label="Show all work experience" href={"/work"}>
+              {" "}
+              Show all work experience{" "}
+            </Link>
           </Button>
         </HapticFeedback>
       </div>

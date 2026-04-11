@@ -7,7 +7,7 @@ export default function ProjectStackIcon(stack: Technology) {
   return (
     <Tooltip>
       <TooltipTrigger className="flex flex-wrap     border-dotted  border skill-inner-shadow  [&>svg]:size-5">
-        <  stack.icon />
+        <stack.icon />
       </TooltipTrigger>
       <TooltipContent>{stack.name}</TooltipContent>
     </Tooltip>

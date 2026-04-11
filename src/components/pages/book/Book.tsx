@@ -12,9 +12,8 @@ export default function Book() {
       />
       <div className="flex flex-col gap-5">
         {book.map((b, index) => (
-          <StaggerComponentForList key={index} idx={index} >
-
-          <BookCard {...b} key={index} />
+          <StaggerComponentForList key={index} idx={index}>
+            <BookCard {...b} key={index} />
           </StaggerComponentForList>
         ))}
       </div>

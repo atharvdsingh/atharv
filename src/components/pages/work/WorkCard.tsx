@@ -56,11 +56,13 @@ export default function WorkCard(experience: Experience) {
         <SubHeading as="h4" className="text-foreground font-semibold">
           Thing&apos;s i did
         </SubHeading>
-        <ul className="ml-2" >
+        <ul className="ml-2">
           {experience.description.map((descriptions, index) => (
-            <li className="list-disc" key={index} >
-
-              <SubHeading as="span" className=" "> {descriptions} </SubHeading>
+            <li className="list-disc" key={index}>
+              <SubHeading as="span" className=" ">
+                {" "}
+                {descriptions}{" "}
+              </SubHeading>
             </li>
           ))}
         </ul>

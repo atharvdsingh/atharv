@@ -12,7 +12,12 @@ export default function GearsCard(gear: Gears) {
         className="text-muted-foreground hover:text-foreground   "
         variant={"link"}
       >
-        <Link aria-label={`View gear: ${gear.name}`} className="  " target="_blank" href={gear.link!}>
+        <Link
+          aria-label={`View gear: ${gear.name}`}
+          className="  "
+          target="_blank"
+          href={gear.link!}
+        >
           {gear.name}
         </Link>
       </Button>

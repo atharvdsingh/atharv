@@ -19,7 +19,10 @@ export default function ProjectsCard(project: Project) {
         </div>
         <div className="text-sm text-muted-foreground">
           {project.isLive && project.liveLink && (
-            <SubHeading as="span" className="hover:text-foreground transition-all duration-300 ease-in-out">
+            <SubHeading
+              as="span"
+              className="hover:text-foreground transition-all duration-300 ease-in-out"
+            >
               <Button variant={"link"}>
                 <Link
                   aria-label={`Live preview of ${project.name}`}
@@ -69,10 +72,12 @@ export default function ProjectsCard(project: Project) {
         <SubHeading as="h4" className="text-foreground font-semibold">
           Thing&apos;s i did{" "}
         </SubHeading>
-        <ul className="ml-2" >
+        <ul className="ml-2">
           {project.description.map((descriptions, index) => (
             <li className="list-disc" key={index}>
-              <SubHeading as="span" className=" ">{descriptions}</SubHeading>
+              <SubHeading as="span" className=" ">
+                {descriptions}
+              </SubHeading>
             </li>
           ))}
         </ul>

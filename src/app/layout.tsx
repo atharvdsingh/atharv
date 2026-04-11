@@ -6,11 +6,11 @@ import Navbar from "@/components/common/Navbar";
 import { ViewTransitions } from "next-view-transitions";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Footer from "@/components/common/Footer";
-import { Analytics } from '@vercel/analytics/next';
+import { Analytics } from "@vercel/analytics/next";
 import GoToTop from "@/components/common/GoToTop";
 // import { generateMetadata as getMetadata } from "@/config/Meta.config";
 import Blur from "@/components/common/Blur";
-import  type {Metadata}  from "next";
+import type { Metadata } from "next";
 
 const hanken_Groktesk = Hanken_Grotesk({
   subsets: ["latin"],
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Atharv Dev singh",
     description:
-    "Atharv dev singh i'm a full stack developer based in india, i worked as a full stack developer ",
+      "Atharv dev singh i'm a full stack developer based in india, i worked as a full stack developer ",
     url: "https://atharv.sanchetna.in",
     siteName: "Atharv Dev Singh",
     type: "website",
@@ -65,13 +65,7 @@ export default function RootLayout({
     <html
       suppressHydrationWarning
       lang="en"
-      className={cn(
-        "h-full",
-        "antialiased",
-        hanken_Groktesk.variable,
-
-
-      )}
+      className={cn("h-full", "antialiased", hanken_Groktesk.variable)}
     >
       <body suppressHydrationWarning className={hanken_Groktesk.className}>
         <ViewTransitions>
@@ -84,16 +78,14 @@ export default function RootLayout({
             <TooltipProvider>
               <Navbar />
 
-
               {children}
               <Analytics />
               <GoToTop />
               <Footer />
-              <Blur/>
+              <Blur />
             </TooltipProvider>
           </ThemeProvider>
         </ViewTransitions>
-
       </body>
     </html>
   );

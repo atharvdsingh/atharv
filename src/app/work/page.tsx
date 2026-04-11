@@ -5,27 +5,25 @@ import { generateMetadata as getMetadata } from "@/config/Meta.config";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  ...getMetadata('/work-experience'),
+  ...getMetadata("/work-experience"),
   robots: {
     index: true,
     follow: true,
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
 };
 
-
 export default function page() {
   return (
-    <Container   >
+    <Container>
       <StaggerComponentForList>
-
-      <WorkPage />
+        <WorkPage />
       </StaggerComponentForList>
     </Container>
   );

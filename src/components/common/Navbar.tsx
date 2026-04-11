@@ -18,9 +18,13 @@ export default function Navbar() {
               className="   hover:text-accent-foreground duration-200 cursor-pointer "
               key={index}
             >
-              <HapticFeedback feedback="light" >
-
-                <Link aria-label={`Navigation link to ${navItem.label}`} href={navItem.href}>{navItem.label}</Link>
+              <HapticFeedback feedback="light">
+                <Link
+                  aria-label={`Navigation link to ${navItem.label}`}
+                  href={navItem.href}
+                >
+                  {navItem.label}
+                </Link>
               </HapticFeedback>
             </SubHeading>
           ))}

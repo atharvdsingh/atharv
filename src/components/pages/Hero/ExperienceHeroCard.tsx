@@ -24,7 +24,7 @@ export default function ExperienceHeroCard(experience: Experience) {
           {experience.startDate}-
           {experience.endDate ? experience.endDate : "Present"}
         </SubHeading>
-        <SubHeading as="span" className="flex gap-2 " >
+        <SubHeading as="span" className="flex gap-2 ">
           {experience.location}
           <span className="sm:flex  hidden ">
             {experience.locationFlexibility}

@@ -14,7 +14,7 @@ const stealth: Experience = {
   company: "Stealth Startup",
   position: "Founding Engineer",
   location: "Hyderabad",
-  image: "/logos/stealth.png", 
+  image: "/logos/stealth.png",
   locationFlexibility: "Remote",
   description: [
     "Built scalable microservices using NestJS and TypeScript, focusing on clean architecture and modular design.",
@@ -22,9 +22,9 @@ const stealth: Experience = {
     "Integrated Apache Kafka to handle asynchronous events and decoupled heavy background processing from the main event loop.",
     "Optimized database queries and added indexing to support high-throughput data streams in production.",
   ],
-  startDate: "Jan2026", 
-  endDate: "Present",    
-  website: "", 
+  startDate: "Jan2026",
+  endDate: "Present",
+  website: "",
   x: "",
   isCurrent: true,
   isBlur: true,
@@ -32,10 +32,9 @@ const stealth: Experience = {
     { name: "Next.js", icon: NextJs, type: TechnologyEnum.FRONTEND },
     { name: "TypeScript", icon: TypeScript, type: TechnologyEnum.LANGUAGE },
     { name: "NestJS", icon: NestJs, type: TechnologyEnum.BACKEND },
-    {name:"redis",icon:Redis,type:TechnologyEnum.BACKEND},
-    {name:"kafka",icon:Kafka,type:TechnologyEnum.BACKEND},
+    { name: "redis", icon: Redis, type: TechnologyEnum.BACKEND },
+    { name: "kafka", icon: Kafka, type: TechnologyEnum.BACKEND },
     { name: "kubernetes", icon: Kubernetes, type: TechnologyEnum.DEVOPS },
-    
   ],
 };
 
@@ -44,8 +43,7 @@ const IITAllahabadConfig: Experience = {
   position: "Software Developer Intern",
   location: "Allahabad",
   image: "",
-  locationFlexibility:"On-Site"
-  ,
+  locationFlexibility: "On-Site",
   description: [
     "Developed software solutions using React and Next.js for frontend architecture.",
     "Built robust backend services and APIs using Python and Flask.",
@@ -57,7 +55,7 @@ const IITAllahabadConfig: Experience = {
   website: "https://www.iiita.ac.in/",
   x: "https://x.com/iiita_official?lang=en",
   isCurrent: false,
-  isBlur:false,
+  isBlur: false,
   technologies: [
     { name: "React", icon: ReactIcon, type: TechnologyEnum.FRONTEND },
     { name: "Next.js", icon: NextJs, type: TechnologyEnum.FRONTEND },
@@ -68,4 +66,4 @@ const IITAllahabadConfig: Experience = {
   ],
 };
 
-export const experienceConfig: Experience[] = [stealth,IITAllahabadConfig ];
+export const experienceConfig: Experience[] = [stealth, IITAllahabadConfig];

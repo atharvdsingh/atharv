@@ -4,7 +4,7 @@ export interface About {
   name: string;
   craft: string[];
   image: string;
-  email: string
+  email: string;
 }
 
 export interface Contact {
@@ -40,7 +40,7 @@ export interface Experience {
   company: string;
   position: string;
   location: string;
-  locationFlexibility: "Remote" | "On-Site"
+  locationFlexibility: "Remote" | "On-Site";
   image: string;
   description: string[];
   startDate: string;
@@ -69,7 +69,7 @@ export interface Footer {
 export interface Gears {
   name: string;
   icon: React.ReactNode;
-  link?: string
+  link?: string;
 }
 
 // export interface Skills {
@@ -107,12 +107,10 @@ export interface BaseSiteConfig {
 }
 
 export interface Navbar {
-  navItems:
-  {
+  navItems: {
     label: string;
     href: string;
-  }[]
-
+  }[];
 }
 
 export interface Project {
@@ -124,7 +122,7 @@ export interface Project {
   github: string;
   liveLink?: string;
   duration?: string;
-  type: ProjectType
+  type: ProjectType;
 }
 
 export interface quote {
@@ -164,32 +162,29 @@ export interface Resume {
 }
 
 export interface Craft {
-
-  name: string,
-  description: string
-  href?: string
+  name: string;
+  description: string;
+  href?: string;
 }
 
 export interface Book {
- 
-  type: BookTypeEnum,
-  book:{
-    name:string,
-    author:string,
-    link:string
-  }[]
-  
+  type: BookTypeEnum;
+  book: {
+    name: string;
+    author: string;
+    link: string;
+  }[];
 }
 
 export enum BookTypeEnum {
   TECH = "Tech",
   NOVEL = "Novel",
   SELF_HELP = "Self Help",
-  MEANING = "Meaning of Life"
+  MEANING = "Meaning of Life",
 }
 
 export interface Movies {
-  name:string,
-  imdbHref:string,
-  releaseDate?:string,
+  name: string;
+  imdbHref: string;
+  releaseDate?: string;
 }

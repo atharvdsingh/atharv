@@ -15,18 +15,20 @@ export default function GhostButton({
   name?: string;
 }) {
   return (
-    <div {...props} className={cn(" flex size-9 shrink-0 skill-inner-shadow items-center justify-center rounded-md border border-border bg-muted text-muted-foreground  ", className)} >
+    <div
+      {...props}
+      className={cn(
+        " flex size-9 shrink-0 skill-inner-shadow items-center justify-center rounded-md border border-border bg-muted text-muted-foreground  ",
+        className,
+      )}
+    >
       <Tooltip>
-        <TooltipTrigger asChild>
-
-          {children}
-        </TooltipTrigger>
-        {
-          name && <TooltipContent>
+        <TooltipTrigger asChild>{children}</TooltipTrigger>
+        {name && (
+          <TooltipContent>
             <p>{name}</p>
           </TooltipContent>
-        }
-
+        )}
       </Tooltip>
     </div>
   );

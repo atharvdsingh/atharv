@@ -5,6 +5,6 @@ export const navbarConfig: Navbar = {
     { label: "Home", href: "/" },
     { label: "Work", href: "/work" },
     { label: "Projects", href: "/projects" },
-    {label:"Resume",href:"/resume"}
+    { label: "Resume", href: "/resume" },
   ],
 };

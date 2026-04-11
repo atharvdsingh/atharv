@@ -1,4 +1,4 @@
-import {  SocialLinks } from "@/types/config";
+import { SocialLinks } from "@/types/config";
 import X from "@/components/svgs/X";
 import LinkedIn from "@/components/svgs/LinkedIn";
 import Github from "@/components/svgs/Github";

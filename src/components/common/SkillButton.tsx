@@ -12,7 +12,7 @@ export default function SkillButton({
 }) {
   return (
     <Button
-      variant={"outline"} 
+      variant={"outline"}
       {...props}
       className={cn(
         ` skill-inner-shadow  transition-all  inset-shadow-sidebar-ring `,

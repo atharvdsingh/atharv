@@ -1,33 +1,38 @@
-'use client';
+"use client";
 
-import { useCallback } from 'react';
+import { useCallback } from "react";
 
-export type HapticFeedbackType = 'light' | 'medium' | 'heavy' | 'selection' | 'impact';
+export type HapticFeedbackType =
+  | "light"
+  | "medium"
+  | "heavy"
+  | "selection"
+  | "impact";
 
 export const useHapticFeedback = () => {
-  const triggerHaptic = useCallback((type: HapticFeedbackType = 'light') => {
+  const triggerHaptic = useCallback((type: HapticFeedbackType = "light") => {
     // Check if we're in a browser environment and if haptic feedback is supported
-    if (typeof window === 'undefined') return;
+    if (typeof window === "undefined") return;
 
     try {
-      if ('vibrate' in navigator) {
-        let pattern: number | number[] = 10; 
+      if ("vibrate" in navigator) {
+        let pattern: number | number[] = 10;
 
         switch (type) {
-          case 'light':
+          case "light":
             pattern = 10;
             break;
-          case 'medium':
+          case "medium":
             pattern = 40;
             break;
-          case 'heavy':
+          case "heavy":
             pattern = 80;
             break;
-          case 'selection':
+          case "selection":
             pattern = [10];
             break;
-          case 'impact':
-            pattern = [15, 10, 15,40,40,40];
+          case "impact":
+            pattern = [15, 10, 15, 40, 40, 40];
             break;
         }
 
@@ -41,7 +46,7 @@ export const useHapticFeedback = () => {
           window.DeviceMotionEvent as unknown as {
             requestPermission?: () => Promise<string>;
           }
-        ).requestPermission === 'function'
+        ).requestPermission === "function"
       ) {
         // iOS haptic feedback through AudioContext (workaround)
         const AudioContextClass =
@@ -71,12 +76,12 @@ export const useHapticFeedback = () => {
       }
     } catch (error) {
       // Silently fail if haptic feedback is not supported
-      console.debug('Haptic feedback not supported:', error);
+      console.debug("Haptic feedback not supported:", error);
     }
   }, []);
 
   const isMobile = useCallback(() => {
-    if (typeof window === 'undefined') return false;
+    if (typeof window === "undefined") return false;
     return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
       navigator.userAgent,
     );
@@ -85,6 +90,6 @@ export const useHapticFeedback = () => {
   return {
     triggerHaptic,
     isMobile,
-    isSupported: typeof navigator !== 'undefined' && 'vibrate' in navigator,
+    isSupported: typeof navigator !== "undefined" && "vibrate" in navigator,
   };
 };

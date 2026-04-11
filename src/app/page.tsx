@@ -15,15 +15,15 @@ export default function Home() {
         <div className=" flex flex-col min-h-screen ">
           <StaggerComponentForList idx={1}>
             <main>
-            <MainHeading />
+              <MainHeading />
             </main>
           </StaggerComponentForList>
 
           <StaggerComponentForList idx={2}>
             <main>
-            <SubHeading className="text-sm py-4 ">
-              {basicInformationService.info}
-            </SubHeading>
+              <SubHeading className="text-sm py-4 ">
+                {basicInformationService.info}
+              </SubHeading>
             </main>
           </StaggerComponentForList>
 
@@ -33,13 +33,13 @@ export default function Home() {
 
           <StaggerComponentForList idx={4}>
             <main>
-            <ExperienceHero />
+              <ExperienceHero />
             </main>
           </StaggerComponentForList>
 
           <StaggerComponentForList idx={5}>
             <main>
-            <Project />
+              <Project />
             </main>
           </StaggerComponentForList>
 

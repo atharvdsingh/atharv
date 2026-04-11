@@ -1,6 +1,9 @@
 "use client";
 
-import { HapticFeedbackType, useHapticFeedback } from "@/hooks/use-haptic-feedback";
+import {
+  HapticFeedbackType,
+  useHapticFeedback,
+} from "@/hooks/use-haptic-feedback";
 import { cn } from "@/lib/utils";
 import React from "react";
 
@@ -14,10 +17,10 @@ export default function HapticFeedback({
   className?: string;
   feedback: HapticFeedbackType;
 }) {
-    const { isMobile,triggerHaptic } =useHapticFeedback()
+  const { isMobile, triggerHaptic } = useHapticFeedback();
   const handleFeedback = () => {
-    if(isMobile()){
-        triggerHaptic(feedback)
+    if (isMobile()) {
+      triggerHaptic(feedback);
     }
   };
   return (

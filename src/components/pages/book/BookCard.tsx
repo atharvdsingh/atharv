@@ -10,13 +10,11 @@ export default function BookCard(book: Book) {
     <div>
       <div className="flex flex-col space-y-4 ">
         <div className="flex justify-start items-center gap-2 ">
-
           <BookOpen size={20} />
           <MajorHeading as="h3">{book.type}</MajorHeading>
         </div>
 
-        <div className="grid space- grid-cols-1 md:grid-cols-2 gap-5 " >
-
+        <div className="grid space- grid-cols-1 md:grid-cols-2 gap-5 ">
           {book.book.map((b, index) => (
             <GhostCard subtitle={b.author} key={index}>
               {b.name}

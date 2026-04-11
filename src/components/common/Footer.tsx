@@ -16,9 +16,12 @@ export default function Footer() {
                 key={index}
                 className="hover:text-foreground flex justify-center items-center "
               >
-
-                <Link aria-label={`Navigate to ${item.name}`} className="text-sm " href={item.href}>
-                  <HapticFeedback feedback="selection" >
+                <Link
+                  aria-label={`Navigate to ${item.name}`}
+                  className="text-sm "
+                  href={item.href}
+                >
+                  <HapticFeedback feedback="selection">
                     {item.name}{" "}
                   </HapticFeedback>
                 </Link>
@@ -30,7 +33,11 @@ export default function Footer() {
           <h2>CONNECT</h2>
           <div className="  grid mx-5 grid-cols-5 gap-5 ">
             {footerConfig.contact.map((item, index) => (
-              <SubHeading as="span" key={index} className="hover:text-foreground">
+              <SubHeading
+                as="span"
+                key={index}
+                className="hover:text-foreground"
+              >
                 <a
                   aria-label={`Visit ${item.name}`}
                   className=" flex justify-center items-center [&>svg]:size-5"
