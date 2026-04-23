@@ -16,19 +16,7 @@ export default function ProjectHeroCard(project: Project) {
         <div className="flex flex-col  justify-center  ">
           <div className="flex      items-center  gap-2">
             <Heading as="h3"> {project.name} </Heading>
-            <SubHeading
-              as="span"
-              className="hover:text-foreground transition-all duration-300 ease-in-out "
-            >
-              {" "}
-              <Link
-                aria-label={`Live preview of ${project.name}`}
-                target="_blank"
-                href={project.liveLink!}
-              >
-                <Globe size={20} />
-              </Link>
-            </SubHeading>
+            
             <SubHeading as="span" className="hover:text-foreground">
               <Link
                 aria-label={`GitHub repository for ${project.name}`}

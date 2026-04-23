@@ -17,7 +17,7 @@ export default function ProjectsCard(project: Project) {
           <Heading as="h3">{project.name}</Heading>
           <SubHeading>{project.description[0]}</SubHeading>
         </div>
-        <div className="text-sm text-muted-foreground">
+        <div className="text-sm flex flex-col text-muted-foreground">
           {project.isLive && project.liveLink && (
             <SubHeading
               as="span"
