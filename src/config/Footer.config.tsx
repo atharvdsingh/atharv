@@ -16,6 +16,7 @@ export const footerConfig: Footer = {
     // { name: "Blog", href: "/blog" },
     { name: "Resume", href: "/resume" },
     { name: "Projects", href: "/projects" },
+    { name: "about", href: "/about" },
     { name: "Gears", href: "/gears" },
     { name: "Books", href: "/books" },
     { name: "Movies", href: "/movies" },

@@ -22,7 +22,7 @@ const stealth: Experience = {
     "Integrated Apache Kafka to handle asynchronous events and decoupled heavy background processing from the main event loop.",
     "Optimized database queries and added indexing to support high-throughput data streams in production.",
   ],
-  startDate: "Jan2026",
+  startDate: "Jan 2026",
   endDate: "Present",
   website: "",
   x: "",

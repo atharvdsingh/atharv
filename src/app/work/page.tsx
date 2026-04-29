@@ -1,11 +1,11 @@
+import { Metadata } from "next";
 import StaggerComponentForList from "@/components/animations/StaggerComponentForList";
 import Container from "@/components/common/Container";
 import WorkPage from "@/components/pages/work/WorkPage";
 import { generateMetadata as getMetadata } from "@/config/Meta.config";
-import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  ...getMetadata("/work-experience"),
+  ...getMetadata("/work"),
   robots: {
     index: true,
     follow: true,

@@ -1,15 +1,16 @@
-import { title } from "process";
-import { aboutConfig } from "./About.config";
-import { contactConfig } from "./Contact.config";
-import { socialLinks } from "./SocialLinks.config";
-import { Meta } from "@/types/config";
 import type { Metadata } from "next";
+import { Meta } from "@/types/config";
+import { aboutConfig } from "./About.config";
 import { basicInformationService } from "./BasicInformation.config";
+import { socialLinks } from "./SocialLinks.config";
+
+const fallbackSiteUrl = "https://atharv.sanchetna.in";
 
 export const siteConfig = {
-  title: `${aboutConfig.name} portfolio`,
-  description: ` Portfolio template of @${aboutConfig.name}'s `,
-  url: process.env.NEXT_PUBLIC_URL || "http://localhost:3000",
+  title: `${aboutConfig.name} | Full-Stack Engineer`,
+  description:
+    "Portfolio of Atharv Dev Singh, a full-stack engineer building scalable products, thoughtful web experiences, and backend systems that hold up under pressure.",
+  url: (process.env.NEXT_PUBLIC_URL || fallbackSiteUrl).replace(/\/$/, ""),
   ogImage: aboutConfig.image,
   author: {
     name: aboutConfig.name,
@@ -19,27 +20,27 @@ export const siteConfig = {
     email: socialLinks.find((link) => link.name === "email")?.href,
     keywords: [
       "portfolio",
-      "developer",
-      "full-stack",
-      "react",
-      "nextjs",
-      "typescript",
+      "full-stack engineer",
+      "software engineer",
+      "next.js developer",
+      "typescript developer",
+      "backend systems",
       "web development",
-      aboutConfig.name.toLowerCase(),
-      aboutConfig.name.split(" "),
+      ...aboutConfig.name.split(" "),
     ],
   },
 };
 
 export const pageMetadata: Record<string, Meta> = {
   "/": {
-    title: `${aboutConfig.name} - ${basicInformationService.about}`,
-    description: `${aboutConfig.name} -${basicInformationService.about} expore about me   `,
+    title: `${aboutConfig.name} | ${basicInformationService.about}`,
+    description:
+      "Explore the portfolio of Atharv Dev Singh, a full-stack engineer building scalable products, backend systems, and modern web experiences.",
     keywords: [
       "portfolio",
-      "developer",
-      "full-stack",
-      "web development",
+      "full-stack engineer portfolio",
+      "software engineer portfolio",
+      "next.js portfolio",
       "projects",
       aboutConfig.name,
       ...aboutConfig.name.split(" "),
@@ -47,54 +48,46 @@ export const pageMetadata: Record<string, Meta> = {
     ogImage: aboutConfig.image,
     twitterCard: "summary_large_image",
   },
-  "/contact": {
-    title: "Contact - Get in Touch",
+  "/about": {
+    title: "Who is Atharv Dev Singh",
     description:
-      "Get in touch with me for collaborations, projects, or opportunities. I'd love to hear from you!",
-    keywords: ["contact", "hire", "collaboration", "freelance", "developer"],
-    ogImage: "/assets/logo.png",
-    twitterCard: "summary",
+      "Read the story of Atharv Dev Singh, the engineer behind this portfolio, his work, interests, projects, and the way he thinks about building software.",
+    keywords: [
+      "who is atharv dev singh",
+      "about atharv dev singh",
+      "atharv dev singh bio",
+      "software engineer story",
+      aboutConfig.name,
+    ],
+    ogImage: aboutConfig.image,
+    twitterCard: "summary_large_image",
   },
-  "/work-experience": {
+  "/work": {
     title: "Work Experience - Professional Journey",
     description:
-      "Explore my professional work experience across different companies and roles in software development.",
+      "Explore the professional work of Atharv Dev Singh across startup engineering, frontend architecture, backend systems, and production-focused software development.",
     keywords: [
       "work experience",
-      "career",
-      "professional",
-      "software developer",
+      "software engineer experience",
+      "backend engineer",
+      "frontend engineer",
       "employment history",
     ],
-    ogImage: "/meta/work.png",
+    ogImage: aboutConfig.image,
     twitterCard: "summary_large_image",
   },
   "/projects": {
     title: "Projects - My Work & Projects Portfolio",
     description:
-      "Discover my projects and work across different technologies and domains. From web apps to mobile solutions.",
+      "Discover projects by Atharv Dev Singh across full-stack development, AI-powered productivity tools, and practical web products.",
     keywords: [
       "projects",
-      "portfolio",
-      "web development",
-      "applications",
-      "software",
+      "portfolio projects",
+      "web development projects",
+      "ai projects",
+      "software products",
     ],
-    ogImage: "/meta/projects.png",
-    twitterCard: "summary_large_image",
-  },
-  "/blog": {
-    title: "Blog - Thoughts & Tutorials",
-    description:
-      "Read my thoughts, tutorials, and insights on engineering, programming, and web development.",
-    keywords: [
-      "blog",
-      "tutorials",
-      "programming",
-      "web development",
-      "technical writing",
-    ],
-    ogImage: "/meta/blogs.png",
+    ogImage: aboutConfig.image,
     twitterCard: "summary_large_image",
   },
   "/resume": {
@@ -108,22 +101,49 @@ export const pageMetadata: Record<string, Meta> = {
       "qualifications",
       "download",
     ],
-    ogImage: "/meta/resume.png",
+    ogImage: aboutConfig.image,
     twitterCard: "summary",
   },
   "/gears": {
     title: "Gears - My Setup & Tools",
     description:
-      "Discover the tools, devices, and software I use to get my work done efficiently.",
+      "Discover the tools, devices, and software Atharv Dev Singh uses to design, build, test, and ship software.",
     keywords: [
-      "setup",
+      "developer setup",
       "tools",
       "devices",
       "software",
-      "productivity",
       "development environment",
     ],
-    ogImage: "/meta/gears.png",
+    ogImage: aboutConfig.image,
+    twitterCard: "summary_large_image",
+  },
+  "/books": {
+    title: "Books - What Shapes My Thinking",
+    description:
+      "A reading list from Atharv Dev Singh covering software craftsmanship, systems thinking, philosophy, and the books that shape his work.",
+    keywords: [
+      "books for developers",
+      "software engineering books",
+      "reading list",
+      "books that shape thinking",
+      aboutConfig.name,
+    ],
+    ogImage: aboutConfig.image,
+    twitterCard: "summary_large_image",
+  },
+  "/movies": {
+    title: "Movies - Stories I Keep Returning To",
+    description:
+      "A personal movie list from Atharv Dev Singh with the films he keeps returning to for pressure, pacing, ambition, and storytelling.",
+    keywords: [
+      "favorite movies",
+      "movie list",
+      "films for inspiration",
+      "storytelling references",
+      aboutConfig.name,
+    ],
+    ogImage: aboutConfig.image,
     twitterCard: "summary_large_image",
   },
 };
@@ -134,6 +154,7 @@ export const getPageMetadata = (pathname: string) => {
 
 export const generateMetadata = (pathname: string): Metadata => {
   const pageMeta = getPageMetadata(pathname);
+
   return {
     metadataBase: new URL(siteConfig.url),
     title: pageMeta.title,
