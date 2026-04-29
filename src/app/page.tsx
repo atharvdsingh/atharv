@@ -1,3 +1,5 @@
+import JsonLd from "@/components/common/JsonLd";
+import { structuredData } from "@/config/SeoContent.config";
 import Container from "@/components/common/Container";
 import SubHeading from "@/components/common/headings/SubHeading";
 import ExperienceHero from "@/components/pages/Experience/ExperienceHero";
@@ -11,6 +13,7 @@ import StaggerComponentForList from "@/components/animations/StaggerComponentFor
 export default function Home() {
   return (
     <>
+      <JsonLd data={structuredData.person} />
       <Container className="flex   flex-col   ">
         <div className=" flex flex-col min-h-screen ">
           <StaggerComponentForList idx={1}>
