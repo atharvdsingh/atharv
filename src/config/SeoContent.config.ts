@@ -42,7 +42,8 @@ export const structuredData = {
       siteConfig.author.twitter,
     ].filter(Boolean),
   },
-  getItemList: (type: string, items: Record<string, unknown>[]) => ({
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  getItemList: (type: string, items: any[]) => ({
     "@context": "https://schema.org",
     "@type": "ItemList",
     itemListElement: items.map((item, index) => ({
