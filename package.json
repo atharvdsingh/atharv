@@ -12,12 +12,13 @@
     "lint-staged": "lint-staged"
   },
   "lint-staged": {
-    "**/*": [
-      "npm run lint",
-      "npm run format"
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
     ],
-    "*.js": "eslint --cache --fix",
-    "*.--write": "prettier --write"
+    "*.{json,css,md}": [
+      "prettier --write"
+    ]
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",
