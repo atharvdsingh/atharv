@@ -28,8 +28,10 @@ export default function MainHeading() {
               <span className="items-center-safe">&middot;</span>
             </SubHeading>
           ))}
+
           <CopyToClickBoard className="px-0" text={aboutConfig.email}>
-            <span>{aboutConfig.email}</span>
+            <span className=" hidden sm:block">{aboutConfig.email}</span>
+            <span className="  flex-1 text-xs sm:hidden ">EMAIL</span>
           </CopyToClickBoard>
         </div>
       </div>
