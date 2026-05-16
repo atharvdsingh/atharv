@@ -140,3 +140,21 @@
     inset 0 1px 2px rgba(255, 255, 255, 0.06),
     inset 0 1px 4px rgba(255, 255, 255, 0.03);
 }
+
+@keyframes stagger-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+    filter: blur(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0px);
+  }
+}
+
+.stagger-item {
+  animation: stagger-fade-in 0.3s ease-in-out both;
+  animation-delay: calc(var(--stagger-idx, 0) * 0.05s);
+}
