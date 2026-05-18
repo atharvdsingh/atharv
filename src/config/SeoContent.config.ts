@@ -26,6 +26,12 @@ export const seoContent = {
       "Here is the hardware, software, and everyday carry that makes up my primary development environment.",
     ],
   },
+  blogs: {
+    intro: [
+      "While normal day always end up being writting code, better code everyday. sometimes i do write some of the blogs. i love to write blogs",
+      "So yes sometimes i do write some of the blogs",
+    ],
+  },
 };
 
 export const structuredData = {

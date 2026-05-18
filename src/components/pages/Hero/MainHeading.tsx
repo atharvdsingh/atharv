@@ -16,7 +16,9 @@ export default function MainHeading() {
         className=" flex justify-center  aspect-square  rounded-full items-center object-fill inset-0 bg-lime-300  "
       />
       <div className="flex flex-col px-3 justify-start   ">
-        <Heading as="h1">{aboutConfig.name}</Heading>
+        <Heading as="h1" className="text-2xl">
+          {aboutConfig.name}
+        </Heading>
         <div className="flex flex-wrap items-center gap-x-1 justify-start ">
           {aboutConfig.craft.map((craft, index) => (
             <SubHeading
