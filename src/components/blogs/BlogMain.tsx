@@ -2,7 +2,7 @@ import React from "react";
 import HeadingWithSubheading from "../common/headings/HeadingWithSubheading";
 import ContentSection from "../common/ContentSection";
 
-export default function BlogMain() {
+export default function BlogMain({}) {
   return (
     <div className="mt-10  min-h-screen ">
       <HeadingWithSubheading
