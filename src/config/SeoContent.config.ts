@@ -28,8 +28,8 @@ export const seoContent = {
   },
   blogs: {
     intro: [
-      "While normal day always end up being writting code, better code everyday. sometimes i do write some of the blogs. i love to write blogs",
-      "So yes sometimes i do write some of the blogs",
+      "Beyond writing code every day, I occasionally write about what I'm building, learning, and thinking through.",
+      "These posts cover software engineering, backend architecture, automation, and the occasional deep-dive into something I couldn't stop exploring.",
     ],
   },
 };

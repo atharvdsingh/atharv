@@ -4,7 +4,7 @@ import fs from "fs";
 
 export interface BlogMatterType {
   title: string;
-  publishedAt: Date;
+  publishedAt: string;
   description: string;
   category: string[];
   tags?: string[];

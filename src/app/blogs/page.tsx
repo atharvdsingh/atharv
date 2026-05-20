@@ -1,13 +1,10 @@
 import ContentSection from "@/components/common/ContentSection";
 import JsonLd from "@/components/common/JsonLd";
-import { seoContent, structuredData } from "@/config/SeoContent.config";
-import StaggerComponentForList from "@/components/animations/StaggerComponentForList";
-import HeadingWithSubheading from "@/components/common/headings/HeadingWithSubheading";
+import { structuredData } from "@/config/SeoContent.config";
 import Container from "@/components/common/Container";
 import BlogMain from "@/components/pages/blogs/BlogMain";
 import { blogInstance, BlogMatterType } from "@/lib/blog.helper";
 import Heading from "@/components/common/headings/Heading";
-import { Button } from "@/components/ui/button";
 import { Link } from "next-view-transitions";
 
 import SkillButton from "@/components/common/SkillButton";
@@ -40,6 +37,15 @@ export default async function Book() {
 
   return (
     <Container>
+      <JsonLd
+        data={structuredData.getItemList(
+          "Blog",
+          blog.map((b) => ({
+            name: b.title,
+            url: `/blogs/${b.slug}`,
+          })),
+        )}
+      />
       <BlogMain blogs={blog} />
     </Container>
   );

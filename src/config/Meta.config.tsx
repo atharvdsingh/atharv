@@ -49,14 +49,15 @@ export const pageMetadata: Record<string, Meta> = {
     twitterCard: "summary_large_image",
   },
   "/about": {
-    title: "Who is Atharv Dev Singh",
+    title: "About Atharv Dev Singh | Full-Stack Developer Portfolio",
     description:
-      "Read the story of Atharv Dev Singh, the engineer behind this portfolio, his work, interests, projects, and the way he thinks about building software.",
+      "Learn about Atharv Dev Singh, a full-stack developer building scalable web apps with Next.js, Node.js, and TypeScript. Explore his work, skills, and projects.",
     keywords: [
-      "who is atharv dev singh",
       "about atharv dev singh",
-      "atharv dev singh bio",
-      "software engineer story",
+      "atharv dev singh portfolio",
+      "atharv dev singh developer",
+      "atharv singh full stack",
+      "atharv software engineer",
       aboutConfig.name,
     ],
     ogImage: aboutConfig.image,

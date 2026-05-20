@@ -14,7 +14,7 @@ export default function BlogMain({
     <div className="mt-10  min-h-screen ">
       <HeadingWithSubheading
         heading="Blogs"
-        subHeading="Other then writing better code everyday, sometimes i write some blogs. yahhh i given you permission to read"
+        subHeading="Beyond writing code every day, I occasionally write about what I'm building, learning, and thinking through."
       />
 
       <div className="flex flex-col gap-5">

@@ -15,7 +15,6 @@ export default async function BlogHero() {
     }),
   );
   if (!slugs) return <></>;
-  console.log(blogs);
   return (
     <div className="flex mt-10 gap-4 flex-col ">
       <MajorHeading>Blogs</MajorHeading>

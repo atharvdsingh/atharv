@@ -9,6 +9,7 @@ import { Link } from "next-view-transitions";
 import { MoveLeft } from "lucide-react";
 import type { Metadata } from "next";
 import { siteConfig } from "@/config/Meta.config";
+import JsonLd from "@/components/common/JsonLd";
 import {
   Dialog,
   DialogContent,
@@ -43,9 +44,11 @@ export async function generateMetadata({
     title: `${matter.title} | ${siteConfig.author.name}`,
     description: matter.description,
     keywords: matter.tags,
+    authors: [{ name: siteConfig.author.name }],
     openGraph: {
       title: matter.title,
       description: matter.description,
+      url: `${siteConfig.url}/blogs/${slug[0]}`,
       type: "article",
       publishedTime: new Date(matter.publishedAt).toISOString(),
       authors: [siteConfig.author.name],
@@ -55,6 +58,9 @@ export async function generateMetadata({
       title: matter.title,
       description: matter.description,
       creator: siteConfig.author.twitter,
+    },
+    alternates: {
+      canonical: `${siteConfig.url}/blogs/${slug[0]}`,
     },
   };
 }
@@ -67,8 +73,24 @@ export default async function BlogPost({
   const { slug } = await params;
   const matter = blogInstance.getBlogBySlug(slug[0].toLowerCase());
 
+  const blogJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: matter.title,
+    description: matter.description,
+    datePublished: new Date(matter.publishedAt).toISOString(),
+    author: {
+      "@type": "Person",
+      name: siteConfig.author.name,
+      url: siteConfig.url,
+    },
+    url: `${siteConfig.url}/blogs/${slug[0]}`,
+    keywords: matter.tags?.join(", "),
+  };
+
   return (
     <Container>
+      <JsonLd data={blogJsonLd} />
       <article className="mt-10 min-h-screen">
         {/* Back link */}
         <div
