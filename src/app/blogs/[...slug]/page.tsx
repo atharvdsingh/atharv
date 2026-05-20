@@ -37,7 +37,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string[] }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const { matter } = blogInstance.getBlogBySlug(slug[0].toLowerCase());
+  const matter = blogInstance.getBlogBySlug(slug[0].toLowerCase());
 
   return {
     title: `${matter.title} | ${siteConfig.author.name}`,
@@ -65,7 +65,7 @@ export default async function BlogPost({
   params: Promise<{ slug: string[] }>;
 }) {
   const { slug } = await params;
-  const { matter, content } = blogInstance.getBlogBySlug(slug[0].toLowerCase());
+  const matter = blogInstance.getBlogBySlug(slug[0].toLowerCase());
 
   return (
     <Container>
@@ -143,7 +143,7 @@ export default async function BlogPost({
           className="prose-blog stagger-item"
           style={{ "--stagger-idx": 2 } as React.CSSProperties}
         >
-          <MDXRemote source={content} />
+          <MDXRemote source={matter.content} />
         </div>
       </article>
     </Container>

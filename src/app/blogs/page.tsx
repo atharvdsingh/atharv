@@ -18,7 +18,7 @@ export const metadata: Metadata = generateMetadata("/blogs");
 export default async function Book() {
   const allBlogSlug = blogInstance.getAllSlugs();
   const blog = await Promise.all(
-    allBlogSlug.map((slug) => blogInstance.getBlogMatter(slug + ".mdx")),
+    allBlogSlug.map((slug) => blogInstance.getBlogMatterBySlugs(slug)),
   );
   if (!blog.length)
     return (
@@ -40,7 +40,7 @@ export default async function Book() {
 
   return (
     <Container>
-      <BlogMain blogs={blog.map((b) => ({ slug: b.slug, ...b.matter }))} />
+      <BlogMain blogs={blog} />
     </Container>
   );
 }

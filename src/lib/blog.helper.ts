@@ -9,9 +9,11 @@ export interface BlogMatterType {
   category: string[];
   tags?: string[];
 }
-interface getBlogBySlugType {
+interface BlogPostMeta extends BlogMatterType {
   slug: string;
-  matter: BlogMatterType;
+}
+
+interface BlogPost extends BlogPostMeta {
   content: string;
 }
 
@@ -29,22 +31,25 @@ class BlogUtility {
   public getAllSlugs(): string[] {
     return fs.readdirSync(this.getPath()).map((mdx) => mdx.replace(".mdx", ""));
   }
-  public getBlogBySlug(slug: string): getBlogBySlugType {
+  public getBlogBySlug(slug: string): BlogPost {
     const blog = fs.readFileSync(
       path.join(this.getPath(), slug + ".mdx"),
       "utf8",
     );
     const { content, data } = matter(blog);
     return {
-      slug: slug.replace(".mdx", ""),
-      matter: data as BlogMatterType,
+      slug: slug,
+      ...(data as BlogMatterType),
       content,
     };
   }
-  public async getBlogMatter(slug: string) {
-    const blog = fs.readFileSync(path.join(this.getPath(), slug), "utf-8");
+  public async getBlogMatterBySlugs(slug: string): Promise<BlogPostMeta> {
+    const blog = fs.readFileSync(
+      path.join(this.getPath(), slug + ".mdx"),
+      "utf-8",
+    );
     const { data } = matter(blog);
-    return { slug: slug.replace(".mdx", ""), matter: data as BlogMatterType };
+    return { slug: slug, ...(data as BlogMatterType) };
   }
 }
 
