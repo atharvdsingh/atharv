@@ -2,7 +2,7 @@ import path from "path";
 import matter from "gray-matter";
 import fs from "fs";
 
-interface matterType {
+export interface BlogMatterType {
   title: string;
   publishedAt: Date;
   description: string;
@@ -11,7 +11,7 @@ interface matterType {
 }
 interface getBlogBySlugType {
   slug: string;
-  matter: matterType;
+  matter: BlogMatterType;
   content: string;
 }
 
@@ -30,18 +30,21 @@ class BlogUtility {
     return fs.readdirSync(this.getPath()).map((mdx) => mdx.replace(".mdx", ""));
   }
   public getBlogBySlug(slug: string): getBlogBySlugType {
-    const blog = fs.readFileSync(slug, "utf8");
+    const blog = fs.readFileSync(
+      path.join(this.getPath(), slug + ".mdx"),
+      "utf8",
+    );
     const { content, data } = matter(blog);
     return {
       slug: slug.replace(".mdx", ""),
-      matter: data as matterType,
+      matter: data as BlogMatterType,
       content,
     };
   }
   public async getBlogMatter(slug: string) {
     const blog = fs.readFileSync(path.join(this.getPath(), slug), "utf-8");
     const { data } = matter(blog);
-    return { matter: data };
+    return { matter: data as BlogMatterType };
   }
 }
 

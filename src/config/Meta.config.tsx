@@ -76,6 +76,22 @@ export const pageMetadata: Record<string, Meta> = {
     ogImage: aboutConfig.image,
     twitterCard: "summary_large_image",
   },
+  "/blogs": {
+    title: "Blogs - Thoughts & Writing by Atharv Dev Singh",
+    description:
+      "Read blogs by Atharv Dev Singh on software engineering, backend systems, AI, automation, design thinking, and lessons from building real-world products.",
+    keywords: [
+      "tech blogs",
+      "software engineering blog",
+      "backend engineering",
+      "ai and automation",
+      "developer blog",
+      "coding insights",
+      aboutConfig.name,
+    ],
+    ogImage: aboutConfig.image,
+    twitterCard: "summary_large_image",
+  },
   "/projects": {
     title: "Projects - My Work & Projects Portfolio",
     description:
