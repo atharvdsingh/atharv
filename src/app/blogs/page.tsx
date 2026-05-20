@@ -40,7 +40,7 @@ export default async function Book() {
 
   return (
     <Container>
-      <BlogMain blogs={blog.map((blog) => blog.matter)} />
+      <BlogMain blogs={blog.map((b) => ({ slug: b.slug, ...b.matter }))} />
     </Container>
   );
 }

@@ -1,25 +1,264 @@
 ---
-title: "Who is Atharv"
-publishedAt: "2026-03-18"
-description: "Who is Atharv Dev Singh - This is the story of Atharv Dev Singh, a full stack developer who loves to build cool stuff."
-category: ["Personal"]
-tags: ["who is atharv", "developer", "journey"]
+title: "How I Converted My Old Phone Into a Powerful Serve"
+publishedAt: "2026-04-10"
+description: "A step-by-step guide on how I turned my old Android phone into a fully functional Linux server running Node.js, Nginx, and more — for free."
+category: ["Backend", "Automation"]
+tags: ["android server", "termux", "self hosting", "linux", "node.js", "homelab"]
 ---
 
-# Who is Atharv?
+# How I Converted My Old Phone Into a Powerful Server
 
-Welcome to my blog! I am **Atharv Dev Singh**, a passionate Full Stack Developer who is deeply in love with creating dynamic, intuitive, and modern web applications. 
+We all have that old phone sitting in a drawer, collecting dust. Mine was a **Redmi Note 9 Pro** with a cracked screen and a battery that still held up. Instead of letting it rot, I turned it into a fully functional **Linux server** — and it's been running 24/7 for months.
 
-## My Journey
+Here's exactly how I did it.
 
-My journey into software development started with a simple curiosity about how things work on the internet. Over time, this curiosity evolved into a full-blown passion for coding. I enjoy working across the entire stack, from designing pixel-perfect, responsive user interfaces on the frontend to architecting robust, scalable databases and APIs on the backend.
+---
 
-## What I Do
+## Why Would You Even Do This?
 
-I specialize in building premium and minimalistic web applications. I believe that good design is just as important as clean code. My tech stack typically revolves around modern JavaScript frameworks like React and Next.js, combined with powerful backend solutions.
+Before we get into the how, let's talk about the **why**:
 
-## Beyond the Code
+- **Free hosting** — No monthly cloud bills
+- **Always-on** — Phones are designed to run continuously
+- **Low power consumption** — Uses about 3-5 watts vs 50+ for a desktop
+- **Learning** — There's no better way to learn Linux than administering your own server
+- **Privacy** — Your data stays on your hardware
 
-When I'm not writing code or debugging, I'm usually exploring new technologies, experimenting with design ideas, or writing about my experiences in the tech world. This blog is a place for me to share my learnings, thoughts, and projects with the community.
+> "The best server is the one you already own."
 
-Stay tuned for more articles on **Backend** engineering, **Design** principles, **Automation**, and my **Personal** experiences as a developer!
+---
+
+## Step 1: Install Termux
+
+[Termux](https://termux.dev) is a terminal emulator for Android that gives you a full Linux environment without rooting your phone.
+
+**Important:** Don't install Termux from the Play Store — that version is outdated. Get it from [F-Droid](https://f-droid.org/packages/com.termux/) instead.
+
+```bash
+# After installing Termux, update packages
+pkg update && pkg upgrade -y
+
+# Install essential tools
+pkg install openssh git nodejs python vim curl wget
+```
+
+Once installed, you have access to a real package manager (`pkg`), a real filesystem, and a real shell.
+
+---
+
+## Step 2: Set Up SSH Access
+
+Typing on a phone keyboard is painful. Let's set up SSH so we can connect from a real computer.
+
+```bash
+# Start the SSH daemon
+sshd
+
+# Set a password for your user
+passwd
+
+# Find your phone's IP address
+ifconfig wlan0 | grep "inet "
+```
+
+Now from your laptop:
+
+```bash
+ssh -p 8022 user@192.168.1.xxx
+```
+
+You're in. Welcome to your phone's terminal from the comfort of your keyboard.
+
+---
+
+## Step 3: Install Node.js and Run a Server
+
+Let's get something running:
+
+```bash
+# Node.js is already installed from Step 1
+node --version  # v20.x.x
+
+# Create a simple Express server
+mkdir ~/server && cd ~/server
+npm init -y
+npm install express
+```
+
+Create `index.js`:
+
+```javascript
+const express = require("express");
+const os = require("os");
+
+const app = express();
+const PORT = 3000;
+
+app.get("/", (req, res) => {
+  res.json({
+    message: "Hello from my phone server! 📱",
+    hostname: os.hostname(),
+    uptime: `${Math.floor(os.uptime() / 3600)} hours`,
+    memory: `${Math.round(os.freemem() / 1024 / 1024)}MB free`,
+    platform: os.platform(),
+  });
+});
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
+```
+
+```bash
+node index.js
+```
+
+Visit `http://192.168.1.xxx:3000` from any device on your network. Your phone is now serving HTTP requests.
+
+---
+
+## Step 4: Keep It Running with PM2
+
+The server dies when you close Termux. Let's fix that:
+
+```bash
+npm install -g pm2
+
+# Start with PM2
+pm2 start index.js --name "phone-server"
+
+# Auto-restart on crash
+pm2 save
+
+# Check status
+pm2 status
+```
+
+Output:
+
+```
+┌─────┬──────────────┬─────────┬──────┬───────┐
+│ id  │ name         │ status  │ cpu  │ mem   │
+├─────┼──────────────┼─────────┼──────┼───────┤
+│ 0   │ phone-server │ online  │ 0.1% │ 42MB  │
+└─────┴──────────────┴─────────┴──────┴───────┘
+```
+
+---
+
+## Step 5: Expose It to the Internet
+
+Your server is only accessible on your local network. To make it accessible from anywhere, you have a few options:
+
+### Option A: Cloudflare Tunnel (Recommended)
+
+```bash
+# Install cloudflared
+pkg install cloudflared
+
+# Authenticate
+cloudflared tunnel login
+
+# Create a tunnel
+cloudflared tunnel create phone-server
+
+# Route traffic
+cloudflared tunnel route dns phone-server server.yourdomain.com
+
+# Run the tunnel
+cloudflared tunnel run phone-server
+```
+
+Now `server.yourdomain.com` points to your phone. No port forwarding needed. Free SSL included.
+
+### Option B: Ngrok (Quick & Easy)
+
+```bash
+npm install -g ngrok
+ngrok http 3000
+```
+
+You'll get a public URL like `https://abc123.ngrok.io` that tunnels to your phone.
+
+---
+
+## Step 6: Set Up Nginx as a Reverse Proxy
+
+For a more production-like setup:
+
+```bash
+pkg install nginx
+```
+
+Edit the Nginx config:
+
+```nginx
+server {
+    listen 8080;
+    server_name _;
+
+    location / {
+        proxy_pass http://localhost:3000;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+    }
+}
+```
+
+```bash
+nginx  # Start Nginx
+```
+
+---
+
+## Performance: How Well Does It Actually Work?
+
+After running this setup for 3 months, here are the real numbers:
+
+| Metric | Value |
+|--------|-------|
+| **Uptime** | 99.2% (rebooted twice for Termux updates) |
+| **Avg response time** | ~12ms on local network |
+| **Concurrent connections** | Handles 50+ easily |
+| **Power usage** | ~4 watts (measured with a USB meter) |
+| **Monthly cost** | ₹0 (just electricity) |
+
+For a personal project, API server, or home automation hub — this is more than enough.
+
+---
+
+## What I'm Running on Mine
+
+Currently, my phone server handles:
+
+1. **Personal API** — Serves data for my portfolio site
+2. **Webhook receiver** — Listens for GitHub webhooks to auto-deploy projects
+3. **File server** — Serves files on my local network
+4. **Cron jobs** — Automated scripts that run on schedule
+
+---
+
+## Tips and Gotchas
+
+- **Battery management** — Keep the phone plugged in but don't let it charge to 100% constantly. Some phones let you limit charge to 80%
+- **Disable sleep** — In Developer Options, enable "Stay awake while charging"
+- **Termux wake lock** — Run `termux-wake-lock` to prevent Android from killing Termux in the background
+- **Storage** — Phones have limited storage. Use an SD card or regularly clean logs
+- **Heat** — Phones aren't designed for 24/7 load. Keep it in a ventilated area
+
+---
+
+## Final Thoughts
+
+You don't need a ₹50,000 cloud server to learn backend engineering or host a personal project. That old phone in your drawer is a **perfectly capable Linux machine** — you just need to unlock it.
+
+The best part? You'll learn more about Linux, networking, and server administration from this project than any tutorial could teach you.
+
+Now go dig out that old phone and make it useful again.
+
+---
+
+*Have questions about this setup? Found a better approach? I'd love to hear about it. Drop me a message.*

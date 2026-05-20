@@ -5,7 +5,11 @@ import { BlogMatterType } from "@/lib/blog.helper";
 import BlogCard from "./BlogCard";
 import StaggerComponentForList from "../animations/StaggerComponentForList";
 
-export default function BlogMain({ blogs }: { blogs: BlogMatterType[] }) {
+export default function BlogMain({
+  blogs,
+}: {
+  blogs: (BlogMatterType & { slug: string })[];
+}) {
   return (
     <div className="mt-10  min-h-screen ">
       <HeadingWithSubheading

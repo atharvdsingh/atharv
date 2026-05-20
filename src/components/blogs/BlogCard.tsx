@@ -7,10 +7,14 @@ import { MoveRight } from "lucide-react";
 import { Badge } from "../ui/badge";
 import { Button } from "../ui/button";
 
-export default function BlogCard({ blog }: { blog: BlogMatterType }) {
+export default function BlogCard({
+  blog,
+}: {
+  blog: BlogMatterType & { slug: string };
+}) {
   return (
     <Link
-      href={"blogs//" + blog.title.replaceAll(" ", "-")}
+      href={"/blogs/" + blog.slug}
       className="flex group gap-4 stagger-fade-in transition-all justify-around  items-center"
     >
       <div className="flex flex-col  line-clamp-10  ">

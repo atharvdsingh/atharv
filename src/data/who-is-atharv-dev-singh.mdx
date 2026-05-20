@@ -1,0 +1,103 @@
+---
+title: "Who is Atharv Dev Singh"
+publishedAt: "2026-03-18"
+description: "The story of Atharv Dev Singh — a full-stack engineer who builds scalable products, obsesses over clean architecture, and believes great software is a craft."
+category: ["Personal"]
+tags: ["who is atharv", "developer", "journey", "full stack engineer", "portfolio"]
+---
+
+# Who is Atharv Dev Singh?
+
+I'm **Atharv Dev Singh** — a full-stack engineer who believes that building software is equal parts engineering and art. I don't just write code that works. I write code that **lasts**.
+
+---
+
+## The Beginning
+
+My journey started the way most developers' journeys do — with curiosity. I wanted to understand how the websites I used every day actually worked behind the scenes. What started as inspecting elements in the browser turned into writing my first HTML page, which turned into building my first React app, which turned into... well, this.
+
+> "The best time to start building was yesterday. The second best time is now."
+
+I fell in love with the **feedback loop** — write something, see it come alive, break it, fix it, make it better. That cycle is addictive, and it hasn't stopped since.
+
+---
+
+## What I Build
+
+I work across the entire stack, but my sweet spot is the intersection of **clean backend architecture** and **polished frontend experiences**.
+
+### Frontend
+- **React & Next.js** — my primary tools for building fast, SEO-friendly applications
+- **TypeScript** — because runtime errors are the enemy
+- **Tailwind CSS** — rapid prototyping with pixel-perfect control
+- **Framer Motion** — bringing interfaces to life with purposeful animation
+
+### Backend
+- **Node.js & Express** — the backbone of most of my APIs
+- **PostgreSQL & MongoDB** — choosing the right database for the right problem
+- **Redis** — for caching layers that make everything feel instant
+- **Docker** — because "it works on my machine" isn't good enough
+
+Here's a quick example of how I typically structure an Express route:
+
+```typescript
+import { Router } from "express";
+import { authenticate } from "@/middleware/auth";
+import { validateBody } from "@/middleware/validate";
+import { createPostSchema } from "@/schemas/post.schema";
+import { PostController } from "@/controllers/post.controller";
+
+const router = Router();
+
+router.post(
+  "/posts",
+  authenticate,
+  validateBody(createPostSchema),
+  PostController.create
+);
+
+export default router;
+```
+
+Clean. Predictable. Testable.
+
+---
+
+## My Philosophy
+
+I've learned a few things building software over the years:
+
+1. **Readability beats cleverness** — If your teammate can't understand your code in 30 seconds, rewrite it.
+2. **Ship early, iterate fast** — Perfection is the enemy of progress. Get it out there, get feedback, improve.
+3. **Architecture matters from day one** — Technical debt compounds faster than you think.
+4. **Design is not decoration** — Good design makes software *usable*. Great design makes it *invisible*.
+
+---
+
+## Beyond the Code
+
+When I'm not staring at a terminal, you'll find me:
+
+- 📚 Reading books on systems thinking and software craftsmanship
+- 🎬 Watching films about ambition, pressure, and people operating at the edge
+- 🎮 Occasionally losing myself in a good game
+- ✍️ Writing blog posts like this one
+
+I believe that the best engineers are **curious generalists** — people who pull ideas from everywhere and connect dots that others don't see.
+
+---
+
+## What's Next?
+
+I'm currently focused on:
+
+- Building products that solve real problems for real people
+- Exploring **AI-powered developer tooling** and automation
+- Contributing to open source projects that I believe in
+- Writing more about the craft of software engineering
+
+If you've made it this far, thanks for reading. If you want to build something together or just talk shop, [reach out](mailto:atharvdevsingh@gmail.com). I'm always up for a good conversation about code, design, or the future of the web.
+
+---
+
+*This blog is where I share my thinking. No fluff, no filler — just the things I've learned building software in the real world.*

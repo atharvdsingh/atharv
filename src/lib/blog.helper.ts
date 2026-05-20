@@ -44,7 +44,7 @@ class BlogUtility {
   public async getBlogMatter(slug: string) {
     const blog = fs.readFileSync(path.join(this.getPath(), slug), "utf-8");
     const { data } = matter(blog);
-    return { matter: data as BlogMatterType };
+    return { slug: slug.replace(".mdx", ""), matter: data as BlogMatterType };
   }
 }
 
