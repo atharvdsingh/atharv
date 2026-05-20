@@ -1,9 +1,9 @@
 import React from "react";
-import HeadingWithSubheading from "../common/headings/HeadingWithSubheading";
-import ContentSection from "../common/ContentSection";
+import HeadingWithSubheading from "../../common/headings/HeadingWithSubheading";
+import ContentSection from "../../common/ContentSection";
 import { BlogMatterType } from "@/lib/blog.helper";
 import BlogCard from "./BlogCard";
-import StaggerComponentForList from "../animations/StaggerComponentForList";
+import StaggerComponentForList from "../../animations/StaggerComponentForList";
 
 export default function BlogMain({
   blogs,

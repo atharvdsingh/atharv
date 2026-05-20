@@ -9,6 +9,7 @@ import { basicInformationService } from "@/config/BasicInformation.config";
 import Project from "@/components/pages/Hero/Project";
 import Craft from "@/components/pages/Hero/Craft";
 import StaggerComponentForList from "@/components/animations/StaggerComponentForList";
+import BlogHero from "@/components/BlogHero";
 
 export default function Home() {
   return (
@@ -39,14 +40,19 @@ export default function Home() {
               <ExperienceHero />
             </main>
           </StaggerComponentForList>
-
           <StaggerComponentForList idx={5}>
+            <main>
+              <BlogHero />
+            </main>
+          </StaggerComponentForList>
+
+          <StaggerComponentForList idx={6}>
             <main>
               <Project />
             </main>
           </StaggerComponentForList>
 
-          <StaggerComponentForList idx={6}>
+          <StaggerComponentForList idx={7}>
             <Craft />
           </StaggerComponentForList>
         </div>

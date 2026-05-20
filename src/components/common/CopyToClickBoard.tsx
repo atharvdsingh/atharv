@@ -6,12 +6,12 @@ import HapticFeedback from "./HapticFeedback";
 
 export default function CopyToClickBoard({
   children,
-  text,
+  text = window.location.href,
   className,
   ...props
 }: {
-  children: React.ReactNode;
-  text: string;
+  children?: React.ReactNode;
+  text?: string;
   className?: string;
 }) {
   const [loading, setLoading] = useState<boolean>(false);

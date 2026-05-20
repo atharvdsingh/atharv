@@ -4,7 +4,7 @@ import { seoContent, structuredData } from "@/config/SeoContent.config";
 import StaggerComponentForList from "@/components/animations/StaggerComponentForList";
 import HeadingWithSubheading from "@/components/common/headings/HeadingWithSubheading";
 import Container from "@/components/common/Container";
-import BlogMain from "@/components/blogs/BlogMain";
+import BlogMain from "@/components/pages/blogs/BlogMain";
 import { blogInstance, BlogMatterType } from "@/lib/blog.helper";
 import Heading from "@/components/common/headings/Heading";
 import { Button } from "@/components/ui/button";

@@ -9,6 +9,20 @@ import { Link } from "next-view-transitions";
 import { MoveLeft } from "lucide-react";
 import type { Metadata } from "next";
 import { siteConfig } from "@/config/Meta.config";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
+
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import CopyToClickBoard from "@/components/common/CopyToClickBoard";
+import BlogShareLinkCopyButton from "./BlogShareLinkCopyButton";
 
 export async function generateStaticParams() {
   const post = blogInstance.getAllSlugs();
@@ -57,16 +71,24 @@ export default async function BlogPost({
     <Container>
       <article className="mt-10 min-h-screen">
         {/* Back link */}
-        <Link
-          href="/blogs"
-          className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-8"
+        <div
+          className="stagger-item"
+          style={{ "--stagger-idx": 0 } as React.CSSProperties}
         >
-          <MoveLeft className="size-4" />
-          Back to blogs
-        </Link>
+          <Link
+            href="/blogs"
+            className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-8"
+          >
+            <MoveLeft className="size-4" />
+            Back to blogs
+          </Link>
+        </div>
 
         {/* Blog header */}
-        <header className="mb-10 border-b border-border pb-8">
+        <header
+          className="mb-10 border-b border-border pb-8 stagger-item"
+          style={{ "--stagger-idx": 1 } as React.CSSProperties}
+        >
           <div className="flex flex-wrap gap-2 mb-4">
             {matter.category.map((cat, idx) => (
               <Badge className="bg-accent/90" variant="outline" key={idx}>
@@ -85,18 +107,42 @@ export default async function BlogPost({
           <SubHeading className="text-base mb-4">
             {matter.description}
           </SubHeading>
+          <div className="flex justify-between">
+            <time className="text-sm text-muted-foreground">
+              {new Date(matter.publishedAt).toLocaleDateString("en-US", {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+              })}
+            </time>
+            <Dialog>
+              <DialogTrigger asChild>
+                <Button className="px-4" variant={"outline"}>
+                  Share
+                </Button>
+              </DialogTrigger>
+              <DialogContent className="bg-background rounded-sm ">
+                <DialogHeader className="">
+                  <DialogTitle>Share this post</DialogTitle>
+                </DialogHeader>
+                <DialogDescription>{matter.title}</DialogDescription>
+                <div className="flex items-center gap-2">
+                  <div className="grid flex-1 gap-2">
+                    <p>Copy link</p>
 
-          <time className="text-sm text-muted-foreground">
-            {new Date(matter.publishedAt).toLocaleDateString("en-US", {
-              year: "numeric",
-              month: "long",
-              day: "numeric",
-            })}
-          </time>
+                    <BlogShareLinkCopyButton />
+                  </div>
+                </div>
+              </DialogContent>
+            </Dialog>
+          </div>
         </header>
 
         {/* MDX content */}
-        <div className="prose-blog">
+        <div
+          className="prose-blog stagger-item"
+          style={{ "--stagger-idx": 2 } as React.CSSProperties}
+        >
           <MDXRemote source={content} />
         </div>
       </article>

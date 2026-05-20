@@ -1,11 +1,11 @@
 import { BlogMatterType } from "@/lib/blog.helper";
 import { Link } from "next-view-transitions";
 import React, { ReactNode } from "react";
-import Heading from "../common/headings/Heading";
-import SubHeading from "../common/headings/SubHeading";
+import Heading from "../../common/headings/Heading";
+import SubHeading from "../../common/headings/SubHeading";
 import { MoveRight } from "lucide-react";
-import { Badge } from "../ui/badge";
-import { Button } from "../ui/button";
+import { Badge } from "../../ui/badge";
+import { Button } from "../../ui/button";
 
 export default function BlogCard({
   blog,

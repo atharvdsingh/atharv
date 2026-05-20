@@ -17,9 +17,9 @@ export default function ShowAllProject() {
       className="cursor-pointer w-fit p-2 "
       variant={"outline"}
     >
-      <Link aria-label="Show all Projects" href={"/projects"}>
+      <Link aria-label="Show All Projects" href={"/projects"}>
         {" "}
-        Show all Projects{" "}
+        Show all projects{" "}
       </Link>
     </Button>
   );
